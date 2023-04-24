@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../src/styles.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/20f25c69df.js" crossorigin="anonymous"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <section class="hero">
+            <div id="game-container">
+                <h3>Sudoku Solver</h3>
+                <div id="table-container">
+                    <table class="center" id="game-grid">
+                        <tbody>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="button" onclick="tableToArray()">Solve Puzzle</button>
+                <button class="button" onclick="wipeGrid()">New Puzzle Grid</button>
+                <div class="popup" id="popup">
+                    <img src="../src/images/redx.png">
+                    <h5>No Solution!</h5>
+                    <p>Try a different puzzle</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
+            </div>
+            <script src="../src/sudokusolver.js"></script>
+        </section>
+    </body>
+</html>
