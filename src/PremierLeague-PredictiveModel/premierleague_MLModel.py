@@ -119,4 +119,6 @@ async def get_top_players():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="localhost", port=8000)
+    # Use the environment variable PORT for binding the app to the correct port
+    port = int(os.getenv("PORT", 8000))  # Default to 8000 if PORT is not set
+    uvicorn.run(app, host="0.0.0.0", port=port)  # Ensure the app listens on all interfaces
