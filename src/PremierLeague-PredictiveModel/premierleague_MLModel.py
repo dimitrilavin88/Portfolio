@@ -33,6 +33,9 @@ def download_dataset():
     dataset_name = 'meraxes10/fantasy-premier-league-dataset-2024-2025'
     download_path = './data/'
     os.makedirs(download_path, exist_ok=True)
+    os.environ["KAGGLE_USERNAME"] = os.getenv("KAGGLE_USERNAME")
+    os.environ["KAGGLE_KEY"] = os.getenv("KAGGLE_KEY")
+    kaggle.api.authenticate()
     kaggle.api.dataset_download_files(dataset_name, path=download_path, unzip=True)
     print("Dataset downloaded successfully!")
 
