@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Premier League Player Value Predictor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Premier League Player Value Predictor</h1>
+    
+    <div class="container">
+        <h2>Top Valuable Players</h2>
+        <button onclick="getTopPlayers()">Get Top Players</button>
+        <div id="topPlayers"></div>
+    </div>
+
+    <script>
+        function getTopPlayers() {
+            $.ajax({
+                url: 'http://localhost:8000/api/top_players',
+                method: 'GET',
+                success: function(response) {
+                    if (response.status === 'success') {
+                        displayTopPlayers(response.top_players);
+                    } else {
+                        alert('Error: ' + response.error);
+                    }
+                },
+                error: function(xhr, status, error) {
+                    alert('Error fetching top players: ' + error);
+                }
+            });
+        }
+
+        function displayTopPlayers(players) {
+            let html = '<table>';
+            html += '<tr><th>Name</th><th>Team</th><th>Current Value</th><th>Predicted Value</th></tr>';
+            
+            players.forEach(player => {
+                html += `<tr>
+                    <td>${player.name}</td>
+                    <td>${player.team}</td>
+                    <td>${player.value_season}</td>
+                    <td>${player.predicted_value.toFixed(2)}</td>
+                </tr>`;
+            });
+            
+            html += '</table>';
+            $('#topPlayers').html(html);
+        }
+    </script>
+</body>
+</html> 
