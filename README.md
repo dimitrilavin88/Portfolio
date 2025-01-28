@@ -16,6 +16,13 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript to s
 
 ## 📁 Project Structure
 
+### Included Projects
+
+- [Fantasy Premier League MVP Predictor](https://github.com/dimitrilavin88/Portfolio/tree/master/src/PremierLeague-PredictiveModel)
+- [Job Search Application](https://github.com/dimitrilavin88/react-native-job-app)
+- [Sudoku Puzzle Solver](https://github.com/dimitrilavin88/Portfolio/blob/master/src/sudokusolver.js)
+- [Weather Application](https://github.com/dimitrilavin88/Portfolio/blob/master/src/weather.js)
+
 ### Portfolio Contents
 
 #### Navigation
