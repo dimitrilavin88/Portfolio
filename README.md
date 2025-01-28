@@ -1,4 +1,4 @@
-# [Personal Portfolio Website] (https://www.dimitrilavin.com)
+# [Personal Portfolio Website](https://www.dimitrilavin.com)
 
 A modern, responsive portfolio website built with HTML, CSS, and JavaScript to showcase professional work and projects.
 
