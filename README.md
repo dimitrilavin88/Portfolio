@@ -93,7 +93,6 @@ Each project includes:
 - Contact introduction
 - Social media links
 - Professional email
-- [Additional contact methods]
 
 #### Footer
 
