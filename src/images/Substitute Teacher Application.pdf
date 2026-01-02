@@ -1,0 +1,5208 @@
+%PDF-1.0
+1 0 obj
+<<
+/Type /Catalog
+/Pages 3 0 R
+/Outlines 2 0 R
+/PageMode /UseOutlines
+/PageLayout /OneColumn
+>>
+endobj
+%IsSnapshot is true: False
+%ShowSuperUserPagesOnSubmission: False
+%%x jobPagesSQL: select Category, AdditionalTitle, Years, Location, id, 'Yes' As OpenStatus, DateLastSubmitted from AppJobCodes a  inner join JP_OpenPositions b on a.JobCode = b.id  where IsNull(SelectionActive, '') = 'True' and (IsCurrentlyOpenInternal = 1 OR IsCurrentlyOpenExternal = 1) and AppNo = @AppNo order by OpenStatus DESC, category, additionaltitle, location
+%% ** Session/Perm Info ** 
+%% JobCode: 
+%% Transaction: 6660000
+%% CatPerms: 
+%% JobIDPerms: 
+%% Session Standard? 
+%% Session Userlevel? 
+%% Session RoutingsOnly? 
+%% Session.SessionID? 3tu4jw5beyaoiyqsif433ual
+%% jobPagesSQL: select id, Category, Title from JP_ReqStatus where (IsCurrentlyOpenInternal = 1 Or IsCurrentlyOpenExternal = 1) And id in (select Cast(jobcode as VARCHAR) as JobCode from AppJobCodes where SelectionActive = 'True' AND appno = @AppNo)
+%% jobPagesSQL: select distinct Type, Specialty from AppJobPools where SelectionActive = 'True' AND appno = @AppNo
+%% jcprsSQL: select distinct Page from __System_TraitFields AS SetupTraitFields where Page in (select 'JobID' + cast(id as varchar) from JP_ReqStatus where (IsCurrentlyOpenInternal = 1 OR IsCurrentlyOpenExternal = 1) and id in (select jobcode from AppJobCodes where SelectionActive = 'True' AND appno = @AppNo))
+%% PagesSQL: select id,PageOrder,Title,PrintLocation,Parameters,Condition from __System_Pages where 1=2  or id in(select PageId from SetupPageAssignments where AssignmentType = 'JobID' and AssignedTo in ('827','1438','1642','0') and LangId in ('eng')  AND  OnExternal = 1 )  or id in(select PageId from SetupPageAssignments where AssignmentType = 'PoolCategory' and AssignedTo in ('Substitute Teachers','Secondary Teaching','Support Staff (non-certified)','Athletics/Activities','0') and LangId in ('eng')  AND  OnExternal = 1  AND (District IS NULL) )  or id in(select PageId from SetupPageAssignments where AssignmentType = 'PoolPosition' and AssignedTo in ('Substitute Teachers : Substitute Teacher','Secondary Teaching : ESL','Support Staff (non-certified) : Paraprofessional','Athletics/Activities : Assistant Coach','Athletics/Activities : Head Coach','Secondary Teaching : Foreign Language - Spanish','Secondary Teaching : Mathematics','Secondary Teaching : Mathematics - Computer Science','Secondary Teaching : Science - Biology','Secondary Teaching : Science - Chemistry','0') and LangId in ('eng')  AND  OnExternal = 1  AND (District IS NULL) )  order by PageOrder
+% execute file: /OLACommon/printing/appParts/5experience2.asp
+%% Location, Title:/OLACommon/printing/appParts/5experience2.aspExperience
+% execute file: /OLACommon/printing/appParts/6educationWithDates.asp
+%% Location, Title:/OLACommon/printing/appParts/6educationWithDates.aspEducation
+% execute file: /OLACommon/printing/appParts/6educationcont.asp
+%% Location, Title:/OLACommon/printing/appParts/6educationcont.aspEducation (cont.)
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%Changing Page Font: 10
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: False
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '39' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspCert Info
+% execute file: /OLACommon/printing/appParts/9eca2.asp
+%% Location, Title:/OLACommon/printing/appParts/9eca2.aspExtracurricular
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: False
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '9' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspStatement [Certified]
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: False
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '10' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspStatement [Non-Certified]
+% execute file: /OLACommon/printing/appParts/11languageSkills.asp
+%% Location, Title:/OLACommon/printing/appParts/11languageSkills.aspLanguage Skills
+% execute file: /OLACommon/printing/appParts/12ReferencesRel.asp
+%% Location, Title:/OLACommon/printing/appParts/12ReferencesRel.aspReferences
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%Changing Page Font: 10
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: False
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '38' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%% docPath = https://www.applitrack.com/sd251/OnlineApp/1BrowseFile.aspx?id=52630%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspDocument Upload
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%Changing Page Font: 10
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: True
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '30' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspRelease of Information
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: False
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '17' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspDisclosures
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: False
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '18' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspLegal Information
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%Changing Page Font: 10
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: False
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '22' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspClassified Legal
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%Changing Page Font: 10
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: False
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '23' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspCertified Legal
+%  invoke Main88TraitsSkills: /OLACommon/printing/appParts/88traits-skills.asp
+%Gettings Parms
+%Changing Page Font: 10
+%% SuperUser? 
+%% CustomPermission : 
+%HidePagePrint: False
+%OnlySuperUsersCanView: False
+%OLA SuperUser Cookie: 
+%OLA HRAdmin Cookie: 
+%request transaction: 6660000
+%Session CanViewSuperUserPages: 
+%% Not Hidden! 
+%AppTraitSQL: CacheView '__System_TraitFields', 3600; select * from __System_TraitFields_Cached a left join (     select TraitID, Value, ExtendedValue from AppTraits where id in ( 	      select min(at.id) as FirstAnswerID from __System_TraitFields_Cached sf left join (select * from AppTraits where AppTraits.appno = 20000) at on sf.id = at.TraitID where Page = '25' group by sf.id         )      ) b on a.id = b.TraitID where Page = @Page order by SortOrder 
+%Start of Traits Page
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%% MultiLineText is starting...
+%% No Center
+%% MultiLineText is done...
+%End of Trait Page
+%EndTableColumns
+%% Location, Title:/OLACommon/printing/appParts/88traits-skills.aspVeteran’s Preference
+
+14 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 16 0 R 15 0 R ]
+/Annots 17 0 R>>
+endobj
+15 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 1 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:54 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 25 720.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Personal Data  ) '
+1 0 0 1 29 705.8 Tm
+1 0 0 1 29 719.8 Tm
+1 0 0 1 25 713.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 701.8 Tm
+1 0 0 1 29.0 701.8 Tm
+/Helvetica-Bold 10 Tf
+12 TL
+(Name:  ) '
+/Times-Roman 12 Tf
+14.4 TL
+1 0 0 1 169.5 701.8 Tm
+(Dimitri  ) '
+1 0 0 1 310.0 701.8 Tm
+(E  ) '
+1 0 0 1 450.5 701.8 Tm
+(Lavin  ) '
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 169.5 684.4 Tm
+(\(First\)  ) '
+1 0 0 1 310.0 684.4 Tm
+(\(Middle Initial\)  ) '
+1 0 0 1 450.5 684.4 Tm
+(\(Last\)  ) '
+1 0 0 1 29 674.8 Tm
+1 0 0 1 160.47 671.8 Tm
+(Other name\(s\) under which transcripts, certificates, and former applications may be listed:  ) '
+1 0 0 1 29 662.2 Tm
+1 0 0 1 25 662.2 Tm
+1 0 0 1 29.0 659.2 Tm
+/Helvetica-Bold 10 Tf
+12 TL
+(Other:  ) '
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 169.5 659.2 Tm
+(Dimitri  ) '
+1 0 0 1 310.0 659.2 Tm
+1 0 0 1 450.5 659.2 Tm
+(Lavin  ) '
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 169.5 647.2 Tm
+(\(First\)  ) '
+1 0 0 1 310.0 647.2 Tm
+(\(Middle Initial\)  ) '
+1 0 0 1 450.5 647.2 Tm
+(\(Last\)  ) '
+1 0 0 1 29 637.6 Tm
+1 0 0 1 29.0 637.6 Tm
+/Helvetica-Bold 10 Tf
+12 TL
+(Email Address:  ) '
+1 0 0 1 169.5 637.6 Tm
+/Times-Roman 10 Tf
+12 TL
+(dimitrilavin@gmail.com  ) '
+1 0 0 1 29 625.6 Tm
+1 0 0 1 25 619.6 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Postal Address  ) '
+1 0 0 1 29 605.2 Tm
+1 0 0 1 29 619.2 Tm
+1 0 0 1 25 613.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 601.2 Tm
+1 0 0 1 29 601.2 Tm
+/Helvetica-Bold 10 Tf
+12 TL
+(Permanent Address  ) '
+1 0 0 1 310 601.2 Tm
+(Present Address \(until N/A\)  ) '
+1 0 0 1 29 589.2 Tm
+1 0 0 1 29.0 589.2 Tm
+/Times-Roman 10 Tf
+12 TL
+(Number & Street:  ) '
+1 0 0 1 169.5 589.2 Tm
+(10011 Royal Colony Dr  ) '
+1 0 0 1 310.0 589.2 Tm
+(Number & Street:  ) '
+1 0 0 1 450.5 589.2 Tm
+(3646 E 700 N  ) '
+1 0 0 1 29.0 577.2 Tm
+/Times-Roman 10 Tf
+12 TL
+(Apt. Number:  ) '
+1 0 0 1 169.5 577.2 Tm
+1 0 0 1 310.0 577.2 Tm
+(Apt. Number:  ) '
+1 0 0 1 450.5 577.2 Tm
+1 0 0 1 29.0 565.2 Tm
+(City:  ) '
+1 0 0 1 169.5 565.2 Tm
+(Waxhaw  ) '
+1 0 0 1 310.0 565.2 Tm
+(City:  ) '
+1 0 0 1 450.5 565.2 Tm
+(Menan  ) '
+1 0 0 1 29.0 553.2 Tm
+(State/Province:  ) '
+1 0 0 1 169.5 553.2 Tm
+(NC  ) '
+1 0 0 1 310.0 553.2 Tm
+(State/Province:  ) '
+1 0 0 1 450.5 553.2 Tm
+(ID  ) '
+1 0 0 1 29.0 541.2 Tm
+(Zip/Postal Code:  ) '
+1 0 0 1 169.5 541.2 Tm
+(28173  ) '
+1 0 0 1 310.0 541.2 Tm
+(Zip/Postal Code:  ) '
+1 0 0 1 450.5 541.2 Tm
+(83434  ) '
+1 0 0 1 29.0 529.2 Tm
+(Country:  ) '
+1 0 0 1 169.5 529.2 Tm
+(United States of America  ) '
+1 0 0 1 310.0 529.2 Tm
+(Country:  ) '
+1 0 0 1 450.5 529.2 Tm
+(United States of America  ) '
+1 0 0 1 29.0 517.2 Tm
+(Daytime Phone:  ) '
+1 0 0 1 169.5 517.2 Tm
+(\(704\) 4411704  ) '
+1 0 0 1 310.0 517.2 Tm
+(Phone Number:  ) '
+1 0 0 1 450.5 517.2 Tm
+(\(704\) 4411704  ) '
+1 0 0 1 29.0 505.2 Tm
+(Home/Cell Phone:  ) '
+1 0 0 1 169.5 505.2 Tm
+(\(\)  ) '
+1 0 0 1 29 493.2 Tm
+1 0 0 1 25 487.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Employment Desired  ) '
+1 0 0 1 29 472.8 Tm
+1 0 0 1 29 486.8 Tm
+1 0 0 1 25 480.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 468.8 Tm
+1 0 0 1 29 468.8 Tm
+/Helvetica 12 Tf
+14.4 TL
+(Open Vacancy Desired:  ) '
+1 0 0 1 422.4 468.8 Tm
+/Helvetica-Bold 8 Tf
+9.6 TL
+1 0 0 1 422.4 464.8 Tm
+(Date Last )'
+(Submitted  ) '
+1 0 0 1 506.70 468.8 Tm
+/Helvetica-Bold 8 Tf
+9.6 TL
+1 0 0 1 506.70 464.8 Tm
+(Experience in )'
+(Similar Positions  ) '
+1 0 0 1 29 445.6 Tm
+1 0 0 1 29 445.6 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 445.6 Tm
+(JobID: 1438  ) '
+1 0 0 1 113.30 445.6 Tm
+()'
+() Tj
+/Times-Bold 10 Tf
+12 TL
+(Secondary Teaching:) Tj
+/Times-Roman 10 Tf
+12 TL
+( ESL Teacher ) Tj
+( at Rigby High School ) Tj
+1 0 0 1 422.40 445.6 Tm
+(9/4/2023  ) '
+1 0 0 1 506.70 445.6 Tm
+(student taught  ) '
+1 0 0 1 29 433.6 Tm
+(JobID: 827  ) '
+1 0 0 1 113.30 433.6 Tm
+()'
+() Tj
+/Times-Bold 10 Tf
+12 TL
+(Substitute Teachers:) Tj
+/Times-Roman 10 Tf
+12 TL
+( Substitute Teacher ) Tj
+( at District Office ) Tj
+1 0 0 1 422.40 433.6 Tm
+(9/4/2023  ) '
+1 0 0 1 506.70 433.6 Tm
+(years  ) '
+1 0 0 1 29 421.6 Tm
+(JobID: 1642  ) '
+1 0 0 1 113.30 421.6 Tm
+()'
+() Tj
+/Times-Bold 10 Tf
+12 TL
+(Support Staff \(non-certified\):) Tj
+/Times-Roman 10 Tf
+12 TL
+( Spanish Immersion Classroom ) Tj
+T*
+(Paraprofessional ) Tj
+( at Roberts Elementary School ) Tj
+1 0 0 1 422.40 421.6 Tm
+(9/4/2023  ) '
+1 0 0 1 506.70 421.6 Tm
+(student taught  ) '
+1 0 0 1 29 397.6 Tm
+1 0 0 1 29 385.6 Tm
+1 0 0 1 29 385.6 Tm
+/Helvetica 12 Tf
+14.4 TL
+(Position Desired:  ) '
+1 0 0 1 506.70 385.6 Tm
+/Helvetica-Bold 8 Tf
+9.6 TL
+1 0 0 1 506.70 381.6 Tm
+(Experience in )'
+(Similar Positions  ) '
+1 0 0 1 29 362.4 Tm
+1 0 0 1 29 364.4 Tm
+1 0 0 1 29 364.4 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 364.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Athletics/Activities  ) '
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 352.4 Tm
+( 1.   Assistant Coach  ) '
+1 0 0 1 506.70 352.4 Tm
+(3 years  ) '
+1 0 0 1 29 340.4 Tm
+( 2.   Head Coach  ) '
+1 0 0 1 506.70 340.4 Tm
+(3 years  ) '
+1 0 0 1 29 328.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Secondary Teaching  ) '
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 316.4 Tm
+( 1.   ESL  ) '
+1 0 0 1 506.70 316.4 Tm
+(student taught  ) '
+1 0 0 1 29 304.4 Tm
+( 2.   Foreign Language - Spanish  ) '
+1 0 0 1 506.70 304.4 Tm
+(student taught  ) '
+1 0 0 1 29 292.4 Tm
+( 3.   Mathematics  ) '
+1 0 0 1 506.70 292.4 Tm
+(2 years  ) '
+1 0 0 1 29 280.4 Tm
+( 4.   Mathematics - Computer Science  ) '
+1 0 0 1 506.70 280.4 Tm
+(2 years  ) '
+1 0 0 1 29 268.4 Tm
+( 5.   Science - Biology  ) '
+1 0 0 1 506.70 268.4 Tm
+(2 years  ) '
+1 0 0 1 29 256.4 Tm
+( 6.   Science - Chemistry  ) '
+1 0 0 1 506.70 256.4 Tm
+(2 years  ) '
+1 0 0 1 29 244.4 Tm
+1 0 0 1 25 238.4 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Experience  ) '
+1 0 0 1 29 224.0 Tm
+1 0 0 1 29 238.0 Tm
+1 0 0 1 25 232.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 220.0 Tm
+(Please list ALL relevant work experience )'
+(beginning with the most recent. )'
+1 0 0 1 29 184.0 Tm
+1 0 0 1 29 182.0 Tm
+1 0 0 1 29 182.0 Tm
+ET
+endstream
+endobj
+16 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+1.2 w
+25 702.8 m
+587 702.8 l
+S
+1.2 w
+25 602.2 m
+587 602.2 l
+S
+1.2 w
+25 469.8 m
+587 469.8 l
+S
+1.2 w
+25 221.0 m
+587 221.0 l
+S
+endstream
+endobj
+
+17 0 obj
+[ ]
+endobj
+
+100000 0 obj <<
+/Parent 2 0 R
+/Dest [14 0 R /XYZ null 792 null]
+/Title (-- Lavin, Dimitri --)
+/Next 100001 0 R
+>>
+endobj
+100001 0 obj <<
+/Parent 2 0 R
+/Dest [14 0 R /XYZ null 726.2 null]
+/Title (Personal Data)
+/Prev 100000 0 R
+/Next 100002 0 R
+>>
+endobj
+100002 0 obj <<
+/Parent 2 0 R
+/Dest [14 0 R /XYZ null 625.6 null]
+/Title (Postal Address)
+/Prev 100001 0 R
+/Next 100003 0 R
+>>
+endobj
+100003 0 obj <<
+/Parent 2 0 R
+/Dest [14 0 R /XYZ null 493.2 null]
+/Title (Employment Desired)
+/Prev 100002 0 R
+/Next 100004 0 R
+>>
+endobj
+100004 0 obj <<
+/Parent 2 0 R
+/Dest [14 0 R /XYZ null 244.4 null]
+/Title (Experience)
+/Prev 100003 0 R
+/Next 100005 0 R
+>>
+endobj
+
+18 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 20 0 R 19 0 R ]
+/Annots 21 0 R>>
+endobj
+19 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 2 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 25 720.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Experience Continued  ) '
+1 0 0 1 29 705.8 Tm
+1 0 0 1 29 719.8 Tm
+1 0 0 1 25 713.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 701.8 Tm
+1 0 0 1 29 699.8 Tm
+1 0 0 1 29 699.8 Tm
+1 0 0 1 29 699.8 Tm
+/Times-Bold 10 Tf
+12 TL
+(Current or Most Recent Position  ) '
+1 0 0 1 216.33 699.8 Tm
+(Employer Contact Information  ) '
+1 0 0 1 403.67 699.8 Tm
+(Supervisor/Reference Contact )'
+(Information )'
+1 0 0 1 29 675.8 Tm
+1 0 0 1 29 674.3 Tm
+1 0 0 1 29 674.3 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 674.3 Tm
+(Self Employed  ) '
+(Web/Mobile Developer  ) '
+1 0 0 1 216.33 674.3 Tm
+(10011 Royal Colony Dr )'
+(Waxhaw, NC  28173 )'
+(7044411704  ) '
+1 0 0 1 403.67 674.3 Tm
+(Dimitri Lavin )'
+(dimitrilavin@gmail.com  ) '
+1 0 0 1 29 638.3 Tm
+1 0 0 1 29 650.3 Tm
+1 0 0 1 29 638.3 Tm
+1 0 0 1 29 636.3 Tm
+1 0 0 1 29 636.3 Tm
+1 0 0 1 29 636.3 Tm
+/Times-Bold 10 Tf
+12 TL
+(Date From - Date )'
+(To:  ) '
+1 0 0 1 122.67 636.3 Tm
+/Times-Roman 10 Tf
+12 TL
+(04/2021 - 09/2023  ) '
+1 0 0 1 216.33 636.3 Tm
+/Times-Bold 10 Tf
+12 TL
+(Full or Part Time:  ) '
+1 0 0 1 310.00 636.3 Tm
+/Times-Roman 10 Tf
+12 TL
+(Full  ) '
+1 0 0 1 403.67 636.3 Tm
+/Times-Bold 10 Tf
+12 TL
+(Last Annual )'
+(Salary:  ) '
+1 0 0 1 497.33 636.3 Tm
+/Times-Roman 10 Tf
+12 TL
+(0  ) '
+1 0 0 1 29 612.3 Tm
+1 0 0 1 29 610.6 Tm
+1 0 0 1 29 610.6 Tm
+/Times-Bold 10 Tf
+12 TL
+(Reason for )'
+(Leaving:  ) '
+1 0 0 1 122.66 610.6 Tm
+/Times-Roman 10 Tf
+12 TL
+(Still Employed  ) '
+1 0 0 1 29 586.6 Tm
+/Times-Bold 10 Tf
+12 TL
+(May we contact )'
+(this employer?  ) '
+1 0 0 1 122.66 586.6 Tm
+/Times-Roman 10 Tf
+12 TL
+(Yes  ) '
+1 0 0 1 29 562.6 Tm
+/Times-Bold 10 Tf
+12 TL
+(Responsibilities/ )'
+(Accomplishments )'
+(at this Position  ) '
+1 0 0 1 122.66 562.6 Tm
+/Times-Roman 10 Tf
+12 TL
+(Developing mobile applications and web applications that could be deployed on my website.  ) '
+1 0 0 1 29 526.6 Tm
+1 0 0 1 29 526.6 Tm
+1 0 0 1 29 538.6 Tm
+1 0 0 1 29 526.6 Tm
+1 0 0 1 29 526.6 Tm
+1 0 0 1 29 518.6 Tm
+1 0 0 1 29 518.6 Tm
+/Times-Bold 10 Tf
+12 TL
+(Previous Position Held  ) '
+1 0 0 1 216.33 518.6 Tm
+(Employer Contact Information  ) '
+1 0 0 1 403.67 518.6 Tm
+(Supervisor/Reference Contact )'
+(Information )'
+1 0 0 1 29 494.6 Tm
+1 0 0 1 29 493.1 Tm
+1 0 0 1 29 493.1 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 493.1 Tm
+(Amazon  ) '
+(Warehouse Worker  ) '
+1 0 0 1 216.33 493.1 Tm
+(10800 Old Dowd Rd )'
+(Charlotte, NC  28214 )'
+(N/A  ) '
+1 0 0 1 403.67 493.1 Tm
+(N/A )'
+(N/A  ) '
+1 0 0 1 29 457.1 Tm
+1 0 0 1 29 469.1 Tm
+1 0 0 1 29 457.1 Tm
+1 0 0 1 29 455.1 Tm
+1 0 0 1 29 455.1 Tm
+1 0 0 1 29 455.1 Tm
+/Times-Bold 10 Tf
+12 TL
+(Date From - Date )'
+(To:  ) '
+1 0 0 1 122.67 455.1 Tm
+/Times-Roman 10 Tf
+12 TL
+(07/2021 - 12/2022  ) '
+1 0 0 1 216.33 455.1 Tm
+/Times-Bold 10 Tf
+12 TL
+(Full or Part Time:  ) '
+1 0 0 1 310.00 455.1 Tm
+/Times-Roman 10 Tf
+12 TL
+(Part  ) '
+1 0 0 1 403.67 455.1 Tm
+/Times-Bold 10 Tf
+12 TL
+(Last Annual )'
+(Salary:  ) '
+1 0 0 1 497.33 455.1 Tm
+/Times-Roman 10 Tf
+12 TL
+($20150  ) '
+1 0 0 1 29 431.1 Tm
+1 0 0 1 29 429.4 Tm
+1 0 0 1 29 429.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Reason for )'
+(Leaving:  ) '
+1 0 0 1 122.66 429.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(School  ) '
+1 0 0 1 29 405.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(May we contact )'
+(this employer?  ) '
+1 0 0 1 122.66 405.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(No  ) '
+1 0 0 1 29 381.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Responsibilities/ )'
+(Accomplishments )'
+(at this Position  ) '
+1 0 0 1 122.66 381.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(Organizing where packages belong and filling semi-trucks with packages.  ) '
+1 0 0 1 29 345.4 Tm
+1 0 0 1 29 345.4 Tm
+1 0 0 1 29 357.4 Tm
+1 0 0 1 29 345.4 Tm
+1 0 0 1 29 345.4 Tm
+1 0 0 1 29 337.4 Tm
+1 0 0 1 29 337.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Previous Position Held  ) '
+1 0 0 1 216.33 337.4 Tm
+(Employer Contact Information  ) '
+1 0 0 1 403.67 337.4 Tm
+(Supervisor/Reference Contact )'
+(Information )'
+1 0 0 1 29 313.4 Tm
+1 0 0 1 29 311.9 Tm
+1 0 0 1 29 311.9 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 311.9 Tm
+(The University of North Carolina at Chapel )'
+(Hill and Self Employed  ) '
+(Tutor  ) '
+1 0 0 1 216.33 311.9 Tm
+(450 Ridge Rd )'
+(Chapel Hill, NC  27599 )'
+(9199627710  ) '
+1 0 0 1 403.67 311.9 Tm
+(Robin Horton )'
+(9199627710 )'
+(robin_horton@unc.edu  ) '
+1 0 0 1 29 275.9 Tm
+1 0 0 1 29 287.9 Tm
+1 0 0 1 29 275.9 Tm
+1 0 0 1 29 273.9 Tm
+1 0 0 1 29 273.9 Tm
+1 0 0 1 29 273.9 Tm
+/Times-Bold 10 Tf
+12 TL
+(Date From - Date )'
+(To:  ) '
+1 0 0 1 122.67 273.9 Tm
+/Times-Roman 10 Tf
+12 TL
+(08/2018 - 09/2023  ) '
+1 0 0 1 216.33 273.9 Tm
+/Times-Bold 10 Tf
+12 TL
+(Full or Part Time:  ) '
+1 0 0 1 310.00 273.9 Tm
+/Times-Roman 10 Tf
+12 TL
+(Part  ) '
+1 0 0 1 403.67 273.9 Tm
+/Times-Bold 10 Tf
+12 TL
+(Last Annual )'
+(Salary:  ) '
+1 0 0 1 497.33 273.9 Tm
+/Times-Roman 10 Tf
+12 TL
+(0  ) '
+1 0 0 1 29 249.9 Tm
+1 0 0 1 29 248.2 Tm
+1 0 0 1 29 248.2 Tm
+/Times-Bold 10 Tf
+12 TL
+(Reason for )'
+(Leaving:  ) '
+1 0 0 1 122.66 248.2 Tm
+/Times-Roman 10 Tf
+12 TL
+(Finished school at UNC, but I still tutor in my own time.  ) '
+1 0 0 1 29 224.2 Tm
+/Times-Bold 10 Tf
+12 TL
+(May we contact )'
+(this employer?  ) '
+1 0 0 1 122.66 224.2 Tm
+/Times-Roman 10 Tf
+12 TL
+(Yes  ) '
+1 0 0 1 29 200.2 Tm
+/Times-Bold 10 Tf
+12 TL
+(Responsibilities/ )'
+(Accomplishments )'
+(at this Position  ) '
+1 0 0 1 122.66 200.2 Tm
+/Times-Roman 10 Tf
+12 TL
+(Tutoring college aged students in computer science, mathematics, chemistry and Spanish.  ) '
+1 0 0 1 29 164.2 Tm
+1 0 0 1 29 164.2 Tm
+1 0 0 1 29 176.2 Tm
+1 0 0 1 29 164.2 Tm
+1 0 0 1 29 164.2 Tm
+1 0 0 1 29 156.2 Tm
+ET
+endstream
+endobj
+20 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+1.2 w
+25 702.8 m
+587 702.8 l
+S
+0.4 w
+25 699.8 m
+587.00 699.8 l
+S
+0.4 w
+25 674.13 m
+587.00 674.13 l
+S
+0.4 w
+25 699.8 m
+25 674.13 l
+S
+0.4 w
+212.33 699.8 m
+212.33 674.13 l
+S
+0.4 w
+399.67 699.8 m
+399.67 674.13 l
+S
+0.4 w
+587.00 699.8 m
+587.00 674.13 l
+S
+0.4 w
+25 674.3 m
+587 674.3 l
+S
+0.2 w
+25 674.3 m
+587.00 674.3 l
+S
+0.2 w
+25 636.63 m
+587.00 636.63 l
+S
+0.2 w
+25 674.3 m
+25 636.63 l
+S
+0.2 w
+212.33 674.3 m
+212.33 636.63 l
+S
+0.2 w
+399.67 674.3 m
+399.67 636.63 l
+S
+0.2 w
+587.00 674.3 m
+587.00 636.63 l
+S
+0.4 w
+25 636.63 m
+587 636.63 l
+S
+0.2 w
+25 636.3 m
+587.00 636.3 l
+S
+0.2 w
+25 610.63 m
+587.00 610.63 l
+S
+0.2 w
+25 636.3 m
+25 610.63 l
+S
+0.2 w
+118.67 636.3 m
+118.67 610.63 l
+S
+0.2 w
+212.33 636.3 m
+212.33 610.63 l
+S
+0.2 w
+306.00 636.3 m
+306.00 610.63 l
+S
+0.2 w
+399.67 636.3 m
+399.67 610.63 l
+S
+0.2 w
+493.33 636.3 m
+493.33 610.63 l
+S
+0.2 w
+587.00 636.3 m
+587.00 610.63 l
+S
+0.2 w
+25 610.6 m
+586.99 610.6 l
+S
+0.2 w
+25 584.93 m
+586.99 584.93 l
+S
+0.2 w
+25 560.93 m
+586.99 560.93 l
+S
+0.2 w
+25 524.93 m
+586.99 524.93 l
+S
+0.2 w
+25 610.6 m
+25 524.93 l
+S
+0.2 w
+118.66 610.6 m
+118.66 524.93 l
+S
+0.2 w
+586.99 610.6 m
+586.99 524.93 l
+S
+0.4 w
+25 524.93 m
+587 524.93 l
+S
+0.4 w
+25 674.3 m
+25 524.93 l
+S
+0.4 w
+587 674.3 m
+587 524.93 l
+S
+0.4 w
+25 518.6 m
+587.00 518.6 l
+S
+0.4 w
+25 492.93 m
+587.00 492.93 l
+S
+0.4 w
+25 518.6 m
+25 492.93 l
+S
+0.4 w
+212.33 518.6 m
+212.33 492.93 l
+S
+0.4 w
+399.67 518.6 m
+399.67 492.93 l
+S
+0.4 w
+587.00 518.6 m
+587.00 492.93 l
+S
+0.4 w
+25 493.1 m
+587 493.1 l
+S
+0.2 w
+25 493.1 m
+587.00 493.1 l
+S
+0.2 w
+25 455.43 m
+587.00 455.43 l
+S
+0.2 w
+25 493.1 m
+25 455.43 l
+S
+0.2 w
+212.33 493.1 m
+212.33 455.43 l
+S
+0.2 w
+399.67 493.1 m
+399.67 455.43 l
+S
+0.2 w
+587.00 493.1 m
+587.00 455.43 l
+S
+0.4 w
+25 455.43 m
+587 455.43 l
+S
+0.2 w
+25 455.1 m
+587.00 455.1 l
+S
+0.2 w
+25 429.43 m
+587.00 429.43 l
+S
+0.2 w
+25 455.1 m
+25 429.43 l
+S
+0.2 w
+118.67 455.1 m
+118.67 429.43 l
+S
+0.2 w
+212.33 455.1 m
+212.33 429.43 l
+S
+0.2 w
+306.00 455.1 m
+306.00 429.43 l
+S
+0.2 w
+399.67 455.1 m
+399.67 429.43 l
+S
+0.2 w
+493.33 455.1 m
+493.33 429.43 l
+S
+0.2 w
+587.00 455.1 m
+587.00 429.43 l
+S
+0.2 w
+25 429.4 m
+586.99 429.4 l
+S
+0.2 w
+25 403.73 m
+586.99 403.73 l
+S
+0.2 w
+25 379.73 m
+586.99 379.73 l
+S
+0.2 w
+25 343.73 m
+586.99 343.73 l
+S
+0.2 w
+25 429.4 m
+25 343.73 l
+S
+0.2 w
+118.66 429.4 m
+118.66 343.73 l
+S
+0.2 w
+586.99 429.4 m
+586.99 343.73 l
+S
+0.4 w
+25 343.73 m
+587 343.73 l
+S
+0.4 w
+25 493.1 m
+25 343.73 l
+S
+0.4 w
+587 493.1 m
+587 343.73 l
+S
+0.4 w
+25 337.4 m
+587.00 337.4 l
+S
+0.4 w
+25 311.73 m
+587.00 311.73 l
+S
+0.4 w
+25 337.4 m
+25 311.73 l
+S
+0.4 w
+212.33 337.4 m
+212.33 311.73 l
+S
+0.4 w
+399.67 337.4 m
+399.67 311.73 l
+S
+0.4 w
+587.00 337.4 m
+587.00 311.73 l
+S
+0.4 w
+25 311.9 m
+587 311.9 l
+S
+0.2 w
+25 311.9 m
+587.00 311.9 l
+S
+0.2 w
+25 274.23 m
+587.00 274.23 l
+S
+0.2 w
+25 311.9 m
+25 274.23 l
+S
+0.2 w
+212.33 311.9 m
+212.33 274.23 l
+S
+0.2 w
+399.67 311.9 m
+399.67 274.23 l
+S
+0.2 w
+587.00 311.9 m
+587.00 274.23 l
+S
+0.4 w
+25 274.23 m
+587 274.23 l
+S
+0.2 w
+25 273.9 m
+587.00 273.9 l
+S
+0.2 w
+25 248.23 m
+587.00 248.23 l
+S
+0.2 w
+25 273.9 m
+25 248.23 l
+S
+0.2 w
+118.67 273.9 m
+118.67 248.23 l
+S
+0.2 w
+212.33 273.9 m
+212.33 248.23 l
+S
+0.2 w
+306.00 273.9 m
+306.00 248.23 l
+S
+0.2 w
+399.67 273.9 m
+399.67 248.23 l
+S
+0.2 w
+493.33 273.9 m
+493.33 248.23 l
+S
+0.2 w
+587.00 273.9 m
+587.00 248.23 l
+S
+0.2 w
+25 248.2 m
+586.99 248.2 l
+S
+0.2 w
+25 222.53 m
+586.99 222.53 l
+S
+0.2 w
+25 198.53 m
+586.99 198.53 l
+S
+0.2 w
+25 162.53 m
+586.99 162.53 l
+S
+0.2 w
+25 248.2 m
+25 162.53 l
+S
+0.2 w
+118.66 248.2 m
+118.66 162.53 l
+S
+0.2 w
+586.99 248.2 m
+586.99 162.53 l
+S
+0.4 w
+25 162.53 m
+587 162.53 l
+S
+0.4 w
+25 311.9 m
+25 162.53 l
+S
+0.4 w
+587 311.9 m
+587 162.53 l
+S
+endstream
+endobj
+
+21 0 obj
+[ ]
+endobj
+
+100005 0 obj <<
+/Parent 2 0 R
+/Dest [18 0 R /XYZ null 726.2 null]
+/Title (Experience Continued)
+/Prev 100004 0 R
+/Next 100006 0 R
+>>
+endobj
+
+22 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 24 0 R 23 0 R ]
+/Annots 25 0 R>>
+endobj
+23 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 3 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 25 720.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Education  ) '
+1 0 0 1 29 705.8 Tm
+1 0 0 1 29 719.8 Tm
+1 0 0 1 25 713.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 701.8 Tm
+(Please tell us about your educational background beginning with the most recent.  ) '
+1 0 0 1 29 677.8 Tm
+1 0 0 1 29 672.8 Tm
+1 0 0 1 29 672.8 Tm
+/Times-Bold 10 Tf
+12 TL
+(High School Attended:  ) '
+1 0 0 1 169.50 672.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Marvin Ridge High School, Waxhaw North Carolina  ) '
+1 0 0 1 29 660.8 Tm
+/Times-Bold 10 Tf
+12 TL
+(Graduation Status:  ) '
+1 0 0 1 169.50 660.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(H.S. Diploma  ) '
+1 0 0 1 29 648.8 Tm
+1 0 0 1 29 636.8 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+1 0 0 1 150.34 636.8 Tm
+(Colleges, Universities and Technical Schools Attended:  ) '
+1 0 0 1 29 622.4 Tm
+1 0 0 1 25 622.4 Tm
+1 0 0 1 29 622.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Name and location  ) '
+1 0 0 1 147.02 622.4 Tm
+(Dates Attended:  ) '
+(From - To  ) '
+1 0 0 1 242.56 622.4 Tm
+/Times-Bold 8 Tf
+9.6 TL
+(Major area of study and )'
+(number of semester hours  ) '
+1 0 0 1 349.34 622.4 Tm
+(Minor area of study and )'
+(number of semester hours  ) '
+1 0 0 1 456.12 622.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Degree  ) '
+1 0 0 1 517.94 622.4 Tm
+/Times-Bold 8 Tf
+9.6 TL
+(Date Conferred or )'
+(Expected  ) '
+1 0 0 1 29 598.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(NC - University of North )'
+(Carolina, UNC Chapel Hill )'
+1 0 0 1 147.02 598.4 Tm
+(08/2018  ) '
+(05/2022  ) '
+1 0 0 1 242.56 598.4 Tm
+(Computer Science  ) '
+(Hrs: 15  ) '
+1 0 0 1 349.34 598.4 Tm
+(Mathematics  ) '
+(Hrs: 15  ) '
+1 0 0 1 456.12 598.4 Tm
+(Bachelor's  ) '
+1 0 0 1 517.94 598.4 Tm
+(05/2022  ) '
+1 0 0 1 29 574.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(TX - Southern Methodist )'
+(University  ) '
+1 0 0 1 147.02 574.4 Tm
+(08/2023  ) '
+(05/9999  ) '
+1 0 0 1 242.56 574.4 Tm
+(Computer Science and )'
+(Artificial Intelligence  ) '
+(Hrs: 6  ) '
+1 0 0 1 349.34 574.4 Tm
+(Hrs:  ) '
+1 0 0 1 456.12 574.4 Tm
+(Master's  ) '
+1 0 0 1 517.94 574.4 Tm
+(05/2025  ) '
+1 0 0 1 29 538.4 Tm
+1 0 0 1 29 526.4 Tm
+1 0 0 1 29 514.4 Tm
+1 0 0 1 216.33 514.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Undergraduate  ) '
+1 0 0 1 403.67 514.4 Tm
+(Graduate  ) '
+1 0 0 1 29 502.4 Tm
+(Overall GPA  ) '
+1 0 0 1 216.33 502.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(5.18/6  ) '
+1 0 0 1 403.67 502.4 Tm
+(3.19/4  ) '
+1 0 0 1 29 490.4 Tm
+1 0 0 1 29 478.4 Tm
+1 0 0 1 29 478.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Highest Degree Attained  ) '
+1 0 0 1 216.33 478.4 Tm
+(Number of graduate hours beyond your )'
+(highest degree:  ) '
+1 0 0 1 403.67 478.4 Tm
+(Grad Program Of Study  ) '
+1 0 0 1 29 454.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(BA/BS/etc.  ) '
+1 0 0 1 216.33 454.4 Tm
+(6  ) '
+1 0 0 1 403.67 454.4 Tm
+(Computer Science and Artificial )'
+(Intelligence  ) '
+1 0 0 1 29 430.4 Tm
+1 0 0 1 29 418.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(List honors, awards or distinctions you have earned:  ) '
+/Times-Roman 10 Tf
+12 TL
+(International Baccalaureate Program Graduate  ) '
+1 0 0 1 29 382.4 Tm
+1 0 0 1 29 370.4 Tm
+1 0 0 1 29 370.4 Tm
+1 0 0 1 25 364.4 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Cert Info  ) '
+1 0 0 1 29 350.0 Tm
+1 0 0 1 29 364.0 Tm
+1 0 0 1 25 358.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 346.0 Tm
+1 0 0 1 29 344.0 Tm
+1 0 0 1 29 344.0 Tm
+/Times-Roman 10 Tf
+12 TL
+/Times-Bold 10 Tf
+12 TL
+1 0 0 1 29 344.0 Tm
+(Certification Information  ) '
+1 0 0 1 422.4 344.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 332.0 Tm
+()'
+(*  Do you hold a current teaching certificate? ) Tj
+1 0 0 1 29 320.0 Tm
+1 0 0 1 29 329.0 Tm
+1 0 0 1 422.4 332.0 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+/Times-Bold 10 Tf
+12 TL
+1 0 0 1 29 317.0 Tm
+(If yes:  ) '
+1 0 0 1 422.4 317.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 305.0 Tm
+()'
+(What year did you receive your first official teaching certificate? ) Tj
+1 0 0 1 29 293.0 Tm
+1 0 0 1 29 302.0 Tm
+1 0 0 1 422.4 305.0 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 29 290.0 Tm
+()'
+(What state did you receive your first certificate from? ) Tj
+1 0 0 1 29 278.0 Tm
+1 0 0 1 29 287.0 Tm
+1 0 0 1 422.4 290.0 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 29 275.0 Tm
+()'
+(What type of certificate do you currently hold? ) Tj
+1 0 0 1 29 263.0 Tm
+1 0 0 1 29 272.0 Tm
+1 0 0 1 422.4 275.0 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 29 260.0 Tm
+()'
+(Expiration Date? ) Tj
+1 0 0 1 29 248.0 Tm
+1 0 0 1 29 257.0 Tm
+1 0 0 1 422.4 260.0 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 29 245.0 Tm
+1 0 0 1 29 233.0 Tm
+()'
+(What endorsements are listed on your certificate? ) Tj
+1 0 0 1 29 221.0 Tm
+1 0 0 1 29 216.0 Tm
+1 0 0 1 29 216.0 Tm
+1 0 0 1 29 204.0 Tm
+1 0 0 1 29 204.0 Tm
+1 0 0 1 29 209.0 Tm
+1 0 0 1 422.4 209.0 Tm
+1 0 0 1 29 197.0 Tm
+()'
+(How can you show you are Highly Qualified in the endorsed areas? ) Tj
+1 0 0 1 29 185.0 Tm
+1 0 0 1 29 194.0 Tm
+1 0 0 1 422.4 197.0 Tm
+/Times-Bold 10 Tf
+12 TL
+1 0 0 1 29 182.0 Tm
+(If No:  ) '
+1 0 0 1 422.4 182.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 170.0 Tm
+()'
+(Have you applied for an Idaho certificate? ) Tj
+1 0 0 1 29 158.0 Tm
+1 0 0 1 29 167.0 Tm
+1 0 0 1 422.4 170.0 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 155.0 Tm
+()'
+(List the date you applied for certification: ) Tj
+1 0 0 1 29 143.0 Tm
+1 0 0 1 29 152.0 Tm
+1 0 0 1 422.4 155.0 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 29 140.0 Tm
+()'
+(Have you passed the required Praxis II Exam or taken the ABCTE? ) Tj
+1 0 0 1 29 128.0 Tm
+1 0 0 1 29 137.0 Tm
+1 0 0 1 422.4 140.0 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 113.0 Tm
+ET
+endstream
+endobj
+24 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+1.2 w
+25 702.8 m
+587 702.8 l
+S
+0.2 w
+25 622.4 m
+587.00 622.4 l
+S
+0.2 w
+25 597.07 m
+587.00 597.07 l
+S
+0.2 w
+25 572.73 m
+587.00 572.73 l
+S
+0.2 w
+25 536.73 m
+587.00 536.73 l
+S
+0.2 w
+25 622.4 m
+25 536.73 l
+S
+0.2 w
+143.02 622.4 m
+143.02 536.73 l
+S
+0.2 w
+238.56 622.4 m
+238.56 536.73 l
+S
+0.2 w
+345.34 622.4 m
+345.34 536.73 l
+S
+0.2 w
+452.12 622.4 m
+452.12 536.73 l
+S
+0.2 w
+513.94 622.4 m
+513.94 536.73 l
+S
+0.2 w
+587.00 622.4 m
+587.00 536.73 l
+S
+0.2 w
+25 526.4 m
+587 526.4 l
+S
+1.2 w
+25 347.0 m
+587 347.0 l
+S
+0.002 w
+415 331.0 m
+587 331.0 l
+S
+0.002 w
+415 331.0 m
+415 316.0 l
+S
+0.002 w
+587 331.0 m
+587 316.0 l
+S
+0.002 w
+415 316.0 m
+587 316.0 l
+S
+0.002 w
+415 304.0 m
+587 304.0 l
+S
+0.002 w
+415 304.0 m
+415 289.0 l
+S
+0.002 w
+587 304.0 m
+587 289.0 l
+S
+0.002 w
+415 289.0 m
+587 289.0 l
+S
+0.002 w
+415 289.0 m
+587 289.0 l
+S
+0.002 w
+415 289.0 m
+415 274.0 l
+S
+0.002 w
+587 289.0 m
+587 274.0 l
+S
+0.002 w
+415 274.0 m
+587 274.0 l
+S
+0.002 w
+415 274.0 m
+587 274.0 l
+S
+0.002 w
+415 274.0 m
+415 259.0 l
+S
+0.002 w
+587 274.0 m
+587 259.0 l
+S
+0.002 w
+415 259.0 m
+587 259.0 l
+S
+0.002 w
+415 259.0 m
+587 259.0 l
+S
+0.002 w
+415 259.0 m
+415 244.0 l
+S
+0.002 w
+587 259.0 m
+587 244.0 l
+S
+0.002 w
+415 244.0 m
+587 244.0 l
+S
+0.2 w
+25 216.0 m
+587 216.0 l
+S
+0.2 w
+25 202.33 m
+587 202.33 l
+S
+0.2 w
+25 216.0 m
+25 202.33 l
+S
+0.2 w
+587 216.0 m
+587 202.33 l
+S
+0.002 w
+415 196.0 m
+587 196.0 l
+S
+0.002 w
+415 196.0 m
+415 181.0 l
+S
+0.002 w
+587 196.0 m
+587 181.0 l
+S
+0.002 w
+415 181.0 m
+587 181.0 l
+S
+0.002 w
+415 169.0 m
+587 169.0 l
+S
+0.002 w
+415 169.0 m
+415 154.0 l
+S
+0.002 w
+587 169.0 m
+587 154.0 l
+S
+0.002 w
+415 154.0 m
+587 154.0 l
+S
+0.002 w
+415 154.0 m
+587 154.0 l
+S
+0.002 w
+415 154.0 m
+415 139.0 l
+S
+0.002 w
+587 154.0 m
+587 139.0 l
+S
+0.002 w
+415 139.0 m
+587 139.0 l
+S
+0.002 w
+415 139.0 m
+587 139.0 l
+S
+0.002 w
+415 139.0 m
+415 124.0 l
+S
+0.002 w
+587 139.0 m
+587 124.0 l
+S
+0.002 w
+415 124.0 m
+587 124.0 l
+S
+endstream
+endobj
+
+25 0 obj
+[ ]
+endobj
+
+100006 0 obj <<
+/Parent 2 0 R
+/Dest [22 0 R /XYZ null 726.2 null]
+/Title (Education)
+/Prev 100005 0 R
+/Next 100007 0 R
+>>
+endobj
+100007 0 obj <<
+/Parent 2 0 R
+/Dest [22 0 R /XYZ null 370.4 null]
+/Title (Cert Info)
+/Prev 100006 0 R
+/Next 100008 0 R
+>>
+endobj
+
+26 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 28 0 R 27 0 R ]
+/Annots 29 0 R>>
+endobj
+27 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 4 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 25 720.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Extracurricular Activities  ) '
+1 0 0 1 29 705.8 Tm
+1 0 0 1 29 719.8 Tm
+1 0 0 1 25 713.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 701.8 Tm
+1 0 0 1 29 689.8 Tm
+1 0 0 1 29 689.8 Tm
+/Times-Bold 10 Tf
+12 TL
+(Athletic  ) '
+1 0 0 1 141.4 689.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Soccer  ) '
+1 0 0 1 29 677.8 Tm
+/Times-Bold 10 Tf
+12 TL
+(Club  ) '
+1 0 0 1 141.4 677.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Computer  ) '
+1 0 0 1 253.8 677.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Cultural Awareness  ) '
+1 0 0 1 366.2 677.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Foreign Exchange  ) '
+1 0 0 1 478.6 677.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Freshman Class  ) '
+1 0 0 1 29 665.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 141.4 665.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Intramurals  ) '
+1 0 0 1 253.8 665.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Junior Class  ) '
+1 0 0 1 366.2 665.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Math Team  ) '
+1 0 0 1 478.6 665.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Medical Careers  ) '
+1 0 0 1 29 653.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 141.4 653.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(National Honor Society  ) '
+1 0 0 1 253.8 653.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Science Bowl  ) '
+1 0 0 1 366.2 653.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Service  ) '
+1 0 0 1 478.6 653.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Special Olympics  ) '
+1 0 0 1 29 641.8 Tm
+1 0 0 1 29 629.8 Tm
+/Times-Roman 10 Tf
+12 TL
+(Please provide more details regarding your experience or interest in your selected extra curricular activities. For instance, provide )'
+(details on any experience as a participant at the high school or college level or as a director, coach, supervisor, or sponsor.   ) '
+1 0 0 1 29 601.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 601.8 Tm
+(Soccer - I have grown up playing soccer my whole life and have excelled in the programs I have played an coached for. As a player, I )'
+(have won the North Carolina State Championship, the Southeastern United States Championship and have won a National )'
+(Championship. As a coach, I have coached youth recreational teams and have assisted coaching with my old high school and with BYUI )'
+(competitive league teams. )'
+()'
+(Clubs - I have done very well in numerous school subjects in the STEM field including computer science, mathematics, chemistry and )'
+(biology. For cultural awareness and foreign exchange, I come from a multicultural background where my dad is Chilean and my mom is )'
+(American. Spanish was my first language and I have been able to use it greatly when traveling in and out of the country. I have grown )'
+(an appreciation of other cultures because of it and I am passionate about spreading cultural awareness to those who are eager to learn )'
+(more about the world around them. Lastly, I love helping other and providing service is something that I enjoy doing, especially when I )'
+(organize a group of people to come serve with me.  ) '
+1 0 0 1 29 469.8 Tm
+1 0 0 1 29 457.8 Tm
+1 0 0 1 29 445.8 Tm
+1 0 0 1 29 433.8 Tm
+1 0 0 1 29 433.8 Tm
+1 0 0 1 25 427.8 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Statement  ) '
+1 0 0 1 29 413.4 Tm
+1 0 0 1 29 427.4 Tm
+1 0 0 1 25 421.4 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 409.4 Tm
+1 0 0 1 29 407.4 Tm
+1 0 0 1 29 407.4 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 407.4 Tm
+()'
+(Tip: Use your word processor to copy and paste in your answers. Copy your answers from the word processor and then hit CTRL+V ) Tj
+T*
+(for PC or OpenApple+V for Mac to paste. ) Tj
+1 0 0 1 422.4 407.4 Tm
+1 0 0 1 29 383.4 Tm
+1 0 0 1 29 371.4 Tm
+()'
+(1. Describe the skills or attributes you believe are necessary to be an outstanding teacher. ) Tj
+1 0 0 1 29 359.4 Tm
+1 0 0 1 29 354.4 Tm
+1 0 0 1 29 354.4 Tm
+(Outstanding teachers need to lead by example, have patience, and be willing to learn and understand their students. By example, they )'
+(can show students how they can be excited to come to class, succeed in the classroom, and help them become strong independent )'
+(learners. Patience is very important because not every student is the same and learns at the same pace. Being willing to learn and )'
+(understand your students is crucial because it helps you know how to communicate and build trust with your students while also making )'
+(sure that they are learning the material through their best efforts.  ) '
+1 0 0 1 29 294.4 Tm
+1 0 0 1 29 294.4 Tm
+1 0 0 1 29 299.4 Tm
+1 0 0 1 422.4 299.4 Tm
+1 0 0 1 29 287.4 Tm
+1 0 0 1 29 275.4 Tm
+()'
+(2. How would you address a wide range of skills and abilities in your classroom? ) Tj
+1 0 0 1 29 263.4 Tm
+1 0 0 1 29 258.4 Tm
+1 0 0 1 29 258.4 Tm
+(I would embrace every students' skills and abilities so they can gain the confidence needed to become independent learners. No student )'
+(is the same and every student has their own gifts and talents that help them learn in unique ways, and it is be my responsibility to help )'
+(the students understand that they do not need to be like anybody else but rather feel comfortable with their own strengths. It is also )'
+(important for me to encourage the students to cooperate with each other and to teach one another. We as people are meant to be around )'
+(other people and we tend to learn best from each other, so I need to make sure that students are cooperating and learning from each )'
+(other instead of comparing themselves with one another.  ) '
+1 0 0 1 29 186.4 Tm
+1 0 0 1 29 186.4 Tm
+1 0 0 1 29 191.4 Tm
+1 0 0 1 422.4 191.4 Tm
+1 0 0 1 29 167.4 Tm
+ET
+endstream
+endobj
+28 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+1.2 w
+25 702.8 m
+587 702.8 l
+S
+0.2 w
+25 689.8 m
+587.0 689.8 l
+S
+0.2 w
+25 676.13 m
+587.0 676.13 l
+S
+0.2 w
+25 664.13 m
+587.0 664.13 l
+S
+0.2 w
+25 652.13 m
+587.0 652.13 l
+S
+0.2 w
+25 640.13 m
+587.0 640.13 l
+S
+0.2 w
+25 689.8 m
+25 640.13 l
+S
+0.2 w
+137.4 689.8 m
+137.4 640.13 l
+S
+0.2 w
+249.8 689.8 m
+249.8 640.13 l
+S
+0.2 w
+362.2 689.8 m
+362.2 640.13 l
+S
+0.2 w
+474.6 689.8 m
+474.6 640.13 l
+S
+0.2 w
+587.0 689.8 m
+587.0 640.13 l
+S
+0.2 w
+25 601.8 m
+587 601.8 l
+S
+0.2 w
+25 468.13 m
+587 468.13 l
+S
+0.2 w
+25 601.8 m
+25 468.13 l
+S
+0.2 w
+587 601.8 m
+587 468.13 l
+S
+1.2 w
+25 410.4 m
+587 410.4 l
+S
+0.2 w
+25 354.4 m
+587 354.4 l
+S
+0.2 w
+25 292.73 m
+587 292.73 l
+S
+0.2 w
+25 354.4 m
+25 292.73 l
+S
+0.2 w
+587 354.4 m
+587 292.73 l
+S
+0.2 w
+25 258.4 m
+587 258.4 l
+S
+0.2 w
+25 184.73 m
+587 184.73 l
+S
+0.2 w
+25 258.4 m
+25 184.73 l
+S
+0.2 w
+587 258.4 m
+587 184.73 l
+S
+endstream
+endobj
+
+29 0 obj
+[ ]
+endobj
+
+100008 0 obj <<
+/Parent 2 0 R
+/Dest [26 0 R /XYZ null 726.2 null]
+/Title (Extracurricular Activities)
+/Prev 100007 0 R
+/Next 100009 0 R
+>>
+endobj
+100009 0 obj <<
+/Parent 2 0 R
+/Dest [26 0 R /XYZ null 433.8 null]
+/Title (Statement )
+/Prev 100008 0 R
+/Next 100010 0 R
+>>
+endobj
+
+30 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 32 0 R 31 0 R ]
+/Annots 33 0 R>>
+endobj
+31 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 5 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 29 726.2 Tm
+1 0 0 1 25 720.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Statement  ) '
+1 0 0 1 29 705.8 Tm
+1 0 0 1 29 719.8 Tm
+1 0 0 1 25 713.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 701.8 Tm
+1 0 0 1 29 699.8 Tm
+1 0 0 1 29 699.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 699.8 Tm
+()'
+(Tip: Use your word processor to copy and paste in your answers. Copy your answers from the word processor and then hit CTRL+V ) Tj
+T*
+(for PC or OpenApple+V for Mac to paste. ) Tj
+1 0 0 1 422.4 699.8 Tm
+1 0 0 1 29 675.8 Tm
+1 0 0 1 29 663.8 Tm
+()'
+(1. Please explain how your past personal and professional experience make you a quality candidate for the position for which you are ) Tj
+T*
+(applying. ) Tj
+1 0 0 1 29 639.8 Tm
+1 0 0 1 29 634.8 Tm
+1 0 0 1 29 634.8 Tm
+(My experience in coaching and tutoring has taught me a lot about how I need to approach players and students as well as how I can play )'
+(to their strengths in order to develop them in the classroom/field as well as out of it. Being a coach has helped me learn how to approach )'
+(the classroom as a whole and how you can get the best out of each student to create a welcoming learning environment for everyone. )'
+(Being a tutor has taught me how to work on a more personal basis with a student, specifically how I can learn about the student and use )'
+(their strengths to advantage in learning material as well as developing self-confidence in and out of the classroom.  ) '
+1 0 0 1 29 574.8 Tm
+1 0 0 1 29 574.8 Tm
+1 0 0 1 29 579.8 Tm
+1 0 0 1 422.4 579.8 Tm
+1 0 0 1 29 555.8 Tm
+1 0 0 1 29 543.8 Tm
+1 0 0 1 25 537.8 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Language Skills  ) '
+1 0 0 1 29 523.4 Tm
+1 0 0 1 29 537.4 Tm
+1 0 0 1 25 531.4 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 519.4 Tm
+(Do you know any language other than English? Yes  ) '
+1 0 0 1 29 495.4 Tm
+1 0 0 1 29 495.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Language\(s\):  ) '
+1 0 0 1 129 495.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(Spanish, Portuguese  ) '
+1 0 0 1 29 483.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Oral Level:  ) '
+1 0 0 1 129 483.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(Fluent  ) '
+1 0 0 1 29 471.4 Tm
+/Times-Bold 10 Tf
+12 TL
+(Written Level:  ) '
+1 0 0 1 129 471.4 Tm
+/Times-Roman 10 Tf
+12 TL
+(Fluent  ) '
+1 0 0 1 29 459.4 Tm
+1 0 0 1 25 453.4 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Professional References  ) '
+1 0 0 1 29 439.0 Tm
+1 0 0 1 29 453.0 Tm
+1 0 0 1 25 447.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 435.0 Tm
+1 0 0 1 29 433.0 Tm
+1 0 0 1 29 433.0 Tm
+1 0 0 1 29 421.0 Tm
+1 0 0 1 29 421.0 Tm
+/Times-Bold 10 Tf
+12 TL
+1 0 0 1 216.33 421.0 Tm
+(Reference 1 of 3  ) '
+1 0 0 1 403.67 421.0 Tm
+(Reference 2 of 3  ) '
+1 0 0 1 29 409.0 Tm
+(Name:  ) '
+1 0 0 1 216.33 409.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(Mark Beck  ) '
+1 0 0 1 403.67 409.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(Richard Goldberg  ) '
+1 0 0 1 29 397.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(School/Org:  ) '
+1 0 0 1 216.33 397.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 397.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(The University of North Carolina at Chapel )'
+(Hill  ) '
+1 0 0 1 29 373.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Current Position:  ) '
+1 0 0 1 216.33 373.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 373.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(Director of Undergraduate Studies, Dept of )'
+(Applied Physical Sciences at University of )'
+(North Carolina  ) '
+1 0 0 1 29 337.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Home Phone:  ) '
+1 0 0 1 216.33 337.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 337.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 325.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Cell Phone:  ) '
+1 0 0 1 216.33 325.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(6073772909  ) '
+1 0 0 1 403.67 325.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 313.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Work Phone:  ) '
+1 0 0 1 216.33 313.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 313.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 301.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Mailing Address:  ) '
+1 0 0 1 216.33 301.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 301.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 289.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Email:  ) '
+1 0 0 1 216.33 289.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 289.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(r.goldberg@unc.edu  ) '
+1 0 0 1 29 277.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Relationship to Candidate:  ) '
+1 0 0 1 216.33 277.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(Boss  ) '
+1 0 0 1 403.67 277.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(Head Professor  ) '
+1 0 0 1 29 265.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Years Known:  ) '
+1 0 0 1 216.33 265.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(2  ) '
+1 0 0 1 403.67 265.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(2  ) '
+1 0 0 1 29 253.0 Tm
+1 0 0 1 29 249.0 Tm
+1 0 0 1 29 249.0 Tm
+/Times-Bold 10 Tf
+12 TL
+1 0 0 1 216.33 249.0 Tm
+(Reference 3 of 3  ) '
+1 0 0 1 403.67 249.0 Tm
+1 0 0 1 29 237.0 Tm
+(Name:  ) '
+1 0 0 1 216.33 237.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(Robin Horton  ) '
+1 0 0 1 403.67 237.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 225.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(School/Org:  ) '
+1 0 0 1 216.33 225.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(The University of North Carolina at Chapel )'
+(Hill  ) '
+1 0 0 1 403.67 225.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 201.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Current Position:  ) '
+1 0 0 1 216.33 201.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(Peer Tutoring Specialist  ) '
+1 0 0 1 403.67 201.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 189.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Home Phone:  ) '
+1 0 0 1 216.33 189.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 189.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 177.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Cell Phone:  ) '
+1 0 0 1 216.33 177.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 177.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 165.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Work Phone:  ) '
+1 0 0 1 216.33 165.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 165.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 153.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Mailing Address:  ) '
+1 0 0 1 216.33 153.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 403.67 153.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 141.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Email:  ) '
+1 0 0 1 216.33 141.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(robin_horton@unc.edu  ) '
+1 0 0 1 403.67 141.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 129.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Relationship to Candidate:  ) '
+1 0 0 1 216.33 129.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(Professor  ) '
+1 0 0 1 403.67 129.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 117.0 Tm
+/Times-Bold 10 Tf
+12 TL
+(Years Known:  ) '
+1 0 0 1 216.33 117.0 Tm
+/Times-Roman 10 Tf
+12 TL
+(1  ) '
+1 0 0 1 403.67 117.0 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 105.0 Tm
+1 0 0 1 29 101.0 Tm
+ET
+endstream
+endobj
+32 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+1.2 w
+25 702.8 m
+587 702.8 l
+S
+0.2 w
+25 634.8 m
+587 634.8 l
+S
+0.2 w
+25 573.13 m
+587 573.13 l
+S
+0.2 w
+25 634.8 m
+25 573.13 l
+S
+0.2 w
+587 634.8 m
+587 573.13 l
+S
+1.2 w
+25 520.4 m
+587 520.4 l
+S
+1.2 w
+25 436.0 m
+587 436.0 l
+S
+0.2 w
+25 421.0 m
+587.00 421.0 l
+S
+0.2 w
+25 407.33 m
+587.00 407.33 l
+S
+0.2 w
+25 395.33 m
+587.00 395.33 l
+S
+0.2 w
+25 371.33 m
+587.00 371.33 l
+S
+0.2 w
+25 335.33 m
+587.00 335.33 l
+S
+0.2 w
+25 323.33 m
+587.00 323.33 l
+S
+0.2 w
+25 311.33 m
+587.00 311.33 l
+S
+0.2 w
+25 299.33 m
+587.00 299.33 l
+S
+0.2 w
+25 287.33 m
+587.00 287.33 l
+S
+0.2 w
+25 275.33 m
+587.00 275.33 l
+S
+0.2 w
+25 263.33 m
+587.00 263.33 l
+S
+0.2 w
+25 251.33 m
+587.00 251.33 l
+S
+0.2 w
+25 421.0 m
+25 251.33 l
+S
+0.2 w
+212.33 421.0 m
+212.33 251.33 l
+S
+0.2 w
+399.67 421.0 m
+399.67 251.33 l
+S
+0.2 w
+587.00 421.0 m
+587.00 251.33 l
+S
+0.2 w
+25 249.0 m
+587.00 249.0 l
+S
+0.2 w
+25 235.33 m
+587.00 235.33 l
+S
+0.2 w
+25 223.33 m
+587.00 223.33 l
+S
+0.2 w
+25 199.33 m
+587.00 199.33 l
+S
+0.2 w
+25 187.33 m
+587.00 187.33 l
+S
+0.2 w
+25 175.33 m
+587.00 175.33 l
+S
+0.2 w
+25 163.33 m
+587.00 163.33 l
+S
+0.2 w
+25 151.33 m
+587.00 151.33 l
+S
+0.2 w
+25 139.33 m
+587.00 139.33 l
+S
+0.2 w
+25 127.33 m
+587.00 127.33 l
+S
+0.2 w
+25 115.33 m
+587.00 115.33 l
+S
+0.2 w
+25 103.33 m
+587.00 103.33 l
+S
+0.2 w
+25 249.0 m
+25 103.33 l
+S
+0.2 w
+212.33 249.0 m
+212.33 103.33 l
+S
+0.2 w
+399.67 249.0 m
+399.67 103.33 l
+S
+0.2 w
+587.00 249.0 m
+587.00 103.33 l
+S
+endstream
+endobj
+
+33 0 obj
+[ ]
+endobj
+
+100010 0 obj <<
+/Parent 2 0 R
+/Dest [30 0 R /XYZ null 726.2 null]
+/Title (Statement )
+/Prev 100009 0 R
+/Next 100011 0 R
+>>
+endobj
+100011 0 obj <<
+/Parent 2 0 R
+/Dest [30 0 R /XYZ null 543.8 null]
+/Title (Language Skills)
+/Prev 100010 0 R
+/Next 100012 0 R
+>>
+endobj
+100012 0 obj <<
+/Parent 2 0 R
+/Dest [30 0 R /XYZ null 459.4 null]
+/Title (Professional References)
+/Prev 100011 0 R
+/Next 100013 0 R
+>>
+endobj
+
+34 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 36 0 R 35 0 R ]
+/Annots 37 0 R>>
+endobj
+35 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 6 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 29 726.2 Tm
+1 0 0 1 25 720.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Document Upload  ) '
+1 0 0 1 29 705.8 Tm
+1 0 0 1 29 719.8 Tm
+1 0 0 1 25 713.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 701.8 Tm
+1 0 0 1 29 699.8 Tm
+1 0 0 1 29 699.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 699.8 Tm
+()'
+(Please submit a copy of your driver's license or other government ID to verify legal name.) Tj
+1 0 0 1 29 687.8 Tm
+T*
+(      ) Tj
+0 0 1 rg
+(COMMISSIONER OF MOTOR VEHICLES.pdf) Tj
+%linking to href https://www.applitrack.com/sd251/OnlineApp/1BrowseFile.aspx?id=52630
+0 0 0 rg
+() Tj
+1 0 0 1 29 675.8 Tm
+T*
+1 0 0 1 422.4 699.8 Tm
+1 0 0 1 29 651.8 Tm
+ET
+endstream
+endobj
+36 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+1.2 w
+25 702.8 m
+587 702.8 l
+S
+endstream
+endobj
+
+37 0 obj
+[ ]
+endobj
+
+100013 0 obj <<
+/Parent 2 0 R
+/Dest [34 0 R /XYZ null 726.2 null]
+/Title (Document Upload)
+/Prev 100012 0 R
+/Next 100014 0 R
+>>
+endobj
+
+38 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 40 0 R 39 0 R ]
+/Annots 41 0 R>>
+endobj
+39 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 7 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 29 726.2 Tm
+1 0 0 1 25 720.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Release of Information  ) '
+1 0 0 1 29 705.8 Tm
+1 0 0 1 29 719.8 Tm
+1 0 0 1 25 713.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 701.8 Tm
+1 0 0 1 29 699.8 Tm
+1 0 0 1 29 699.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 699.8 Tm
+()'
+() Tj
+() Tj
+() Tj
+1 0 0 1 29 687.8 Tm
+T*
+() Tj
+(Consent to Release of Information) Tj
+() Tj
+1 0 0 1 422.4 699.8 Tm
+1 0 0 1 29 675.8 Tm
+()'
+(As mentioned in subsection 6 of ) Tj
+0 0 1 rg
+(Idaho Code 33-1210) Tj
+%linking to href https://legislature.idaho.gov/idstat/Title33/T33CH12SECT33-1210.htm
+0 0 0 rg
+( we are required to have this form submitted before we can consider hiring you. If ) Tj
+T*
+(we plan to hire you then subsection 3 requires us to request verification and evaluation information from your previous employers. ) Tj
+T*
+(Please complete the information below for us to consider your application.) Tj
+1 0 0 1 29 639.8 Tm
+T*
+1 0 0 1 422.4 675.8 Tm
+1 0 0 1 29 627.8 Tm
+()'
+(*  ) Tj
+/Times-Bold 10 Tf
+12 TL
+(Dimitri Lavin) Tj
+/Times-Roman 10 Tf
+12 TL
+() Tj
+1 0 0 1 29 615.8 Tm
+T*
+(Social Security Number: ) Tj
+1 0 0 1 29 603.8 Tm
+1 0 0 1 29 612.8 Tm
+1 0 0 1 422.4 627.8 Tm
+0 0 0 rg
+(065928035  ) '
+0 0 0 rg
+1 0 0 1 29 600.8 Tm
+()'
+(*  Have you worked for a school district before? ) Tj
+1 0 0 1 29 588.8 Tm
+1 0 0 1 29 597.8 Tm
+1 0 0 1 422.4 600.8 Tm
+(No  ) '
+1 0 0 1 29 585.8 Tm
+()'
+(If you selected "No" then enter your name and click to digitally sign the document.) Tj
+1 0 0 1 29 573.8 Tm
+T*
+(If you selected "Yes" please digitally sign and fill out the remainder of this form for each of the previous school districts you have ) Tj
+T*
+(been employed with. ) Tj
+1 0 0 1 422.4 585.8 Tm
+1 0 0 1 29 549.8 Tm
+()'
+(I, Dimitri Lavin confirm my selection above and provide my consent for the district\(s\) below to provide the requested information to ) Tj
+T*
+(Jefferson School District #251. ) Tj
+(Enter your name and click the button to digitally sign:) Tj
+1 0 0 1 422.4 549.8 Tm
+1 0 0 1 422.4 545.8 Tm
+1 0 0 1 29 525.8 Tm
+/Helvetica 10 Tf
+12 TL
+1 0 0 1 29 521.8 Tm
+1 0 0 1 29 521.8 Tm
+1 0 0 1 29 515.8 Tm
+()'
+() Tj
+/Helvetica-Bold 10 Tf
+12 TL
+( X) Tj
+/Helvetica 10 Tf
+12 TL
+1 0 0 1 51 521.8 Tm
+()'
+(Signed: ) Tj
+/Helvetica-Bold 10 Tf
+12 TL
+(Dimitri Lavin) Tj
+/Helvetica 10 Tf
+12 TL
+() Tj
+1 0 0 1 51 509.8 Tm
+T*
+() Tj
+/Helvetica 6 Tf
+7.2 TL
+(Stamped: ) Tj
+/Helvetica-Bold 6 Tf
+7.2 TL
+(9/4/2023 8:03:26 PM; 38.43.63.255; Applicant - #20000 - Dimitri Lavin; ) Tj
+/Helvetica 6 Tf
+7.2 TL
+() Tj
+/Helvetica 10 Tf
+12 TL
+0 0 0 rg
+1 0 0 1 51 505.8 Tm
+1 0 0 1 29 493.8 Tm
+/Helvetica 10 Tf
+12 TL
+1 0 0 1 29 489.8 Tm
+1 0 0 1 29 472.8 Tm
+1 0 0 1 29 460.8 Tm
+()'
+(For each district you have worked for please enter the following information \(For more than three districts, fill out this ) Tj
+T*
+(form for the most recent three districts.\):) Tj
+1 0 0 1 29 436.8 Tm
+T*
+(School District Name and Number:) Tj
+1 0 0 1 29 424.8 Tm
+T*
+(District Office Contact Name:) Tj
+1 0 0 1 29 412.8 Tm
+T*
+(Contact E-mail Address: ) Tj
+1 0 0 1 422.4 460.8 Tm
+1 0 0 1 29 400.8 Tm
+1 0 0 1 29 388.8 Tm
+()'
+(District 1 ) Tj
+1 0 0 1 29 376.8 Tm
+1 0 0 1 29 371.8 Tm
+1 0 0 1 29 371.8 Tm
+1 0 0 1 29 359.8 Tm
+1 0 0 1 29 359.8 Tm
+1 0 0 1 29 364.8 Tm
+1 0 0 1 422.4 364.8 Tm
+1 0 0 1 29 352.8 Tm
+1 0 0 1 29 340.8 Tm
+()'
+(District 2 ) Tj
+1 0 0 1 29 328.8 Tm
+1 0 0 1 29 323.8 Tm
+1 0 0 1 29 323.8 Tm
+1 0 0 1 29 311.8 Tm
+1 0 0 1 29 311.8 Tm
+1 0 0 1 29 316.8 Tm
+1 0 0 1 422.4 316.8 Tm
+1 0 0 1 29 304.8 Tm
+1 0 0 1 29 292.8 Tm
+()'
+(District 3 ) Tj
+1 0 0 1 29 280.8 Tm
+1 0 0 1 29 275.8 Tm
+1 0 0 1 29 275.8 Tm
+1 0 0 1 29 263.8 Tm
+1 0 0 1 29 263.8 Tm
+1 0 0 1 29 268.8 Tm
+1 0 0 1 422.4 268.8 Tm
+1 0 0 1 29 256.8 Tm
+()'
+(Jefferson School District is considering hiring Dimitri Lavin and pursuant to Idaho Code 33-1210 is requesting any ) Tj
+T*
+(information in regards to their job performance. We would appreciate it if you would please provide any personnel ) Tj
+T*
+(information available, including evaluations, HQT information, disciplinary actions, etc. Further pursuant to Idaho Code ) Tj
+T*
+(33-1210 you are providing this information in good faith and may not be held civilly liable for the disclosure of the ) Tj
+T*
+(requested information. You may send the information to Monica Pauley by mail or e-mail to one of the addresses below:) Tj
+1 0 0 1 29 196.8 Tm
+T*
+(Monica Pauley) Tj
+1 0 0 1 29 184.8 Tm
+T*
+(3850 E 300 N) Tj
+1 0 0 1 29 172.8 Tm
+T*
+(Rigby, ID  83442) Tj
+1 0 0 1 29 160.8 Tm
+T*
+(or e-mail: mpauley@sd251.org ) Tj
+1 0 0 1 422.4 256.8 Tm
+1 0 0 1 29 136.8 Tm
+ET
+endstream
+endobj
+40 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+1.2 w
+25 702.8 m
+587 702.8 l
+S
+0.002 w
+415 626.8 m
+587 626.8 l
+S
+0.002 w
+415 626.8 m
+415 599.8 l
+S
+0.002 w
+587 626.8 m
+587 599.8 l
+S
+0.002 w
+415 599.8 m
+587 599.8 l
+S
+0.002 w
+415 599.8 m
+587 599.8 l
+S
+0.002 w
+415 599.8 m
+415 584.8 l
+S
+0.002 w
+587 599.8 m
+587 584.8 l
+S
+0.002 w
+415 584.8 m
+587 584.8 l
+S
+0.2 w
+25 521.8 m
+587 521.8 l
+S
+0.2 w
+25 492.13 m
+587 492.13 l
+S
+0.2 w
+25 521.8 m
+25 492.13 l
+S
+0.2 w
+45 521.8 m
+45 492.13 l
+S
+0.2 w
+47 521.8 m
+47 492.13 l
+S
+0.2 w
+587 521.8 m
+587 492.13 l
+S
+0.2 w
+587 521.8 m
+587 492.13 l
+S
+0.01 w
+25 467.8 m
+587 467.8 l
+S
+0.2 w
+25 371.8 m
+587 371.8 l
+S
+0.2 w
+25 358.13 m
+587 358.13 l
+S
+0.2 w
+25 371.8 m
+25 358.13 l
+S
+0.2 w
+587 371.8 m
+587 358.13 l
+S
+0.2 w
+25 323.8 m
+587 323.8 l
+S
+0.2 w
+25 310.13 m
+587 310.13 l
+S
+0.2 w
+25 323.8 m
+25 310.13 l
+S
+0.2 w
+587 323.8 m
+587 310.13 l
+S
+0.2 w
+25 275.8 m
+587 275.8 l
+S
+0.2 w
+25 262.13 m
+587 262.13 l
+S
+0.2 w
+25 275.8 m
+25 262.13 l
+S
+0.2 w
+587 275.8 m
+587 262.13 l
+S
+endstream
+endobj
+
+41 0 obj
+[ 200000 0 R ]
+endobj
+
+100014 0 obj <<
+/Parent 2 0 R
+/Dest [38 0 R /XYZ null 726.2 null]
+/Title (Release of Information)
+/Prev 100013 0 R
+/Next 100015 0 R
+>>
+endobj
+200000 0 obj <<
+/Subtype /Link
+/Rect [ 157.030 663.8 243.920 675.8 ]
+/A << /S /URI /URI (https://legislature.idaho.gov/idstat/Title33/T33CH12SECT33-1210.htm) /NewWindow true >>
+/Border [0 0 0]
+>>
+endobj
+
+42 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 44 0 R 43 0 R ]
+/Annots 45 0 R>>
+endobj
+43 0 obj
+<< /Length 0 >>
+stream
+BT
+/Helvetica 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 8 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 29 714.2 Tm
+1 0 0 1 29 714.2 Tm
+1 0 0 1 25 708.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Disclosures  ) '
+1 0 0 1 29 693.8 Tm
+1 0 0 1 29 707.8 Tm
+1 0 0 1 25 701.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 689.8 Tm
+1 0 0 1 29 687.8 Tm
+1 0 0 1 29 687.8 Tm
+/Times-Roman 10 Tf
+12 TL
+/Times-Bold 10 Tf
+12 TL
+1 0 0 1 29 687.8 Tm
+(Contract Status  ) '
+1 0 0 1 422.4 687.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 675.8 Tm
+()'
+(*  Are you currently under contract? ) Tj
+1 0 0 1 29 663.8 Tm
+1 0 0 1 29 672.8 Tm
+1 0 0 1 422.4 675.8 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 660.8 Tm
+()'
+(    If Yes, which district? ) Tj
+1 0 0 1 29 648.8 Tm
+1 0 0 1 29 657.8 Tm
+1 0 0 1 422.4 660.8 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 29 645.8 Tm
+()'
+(    If Yes, when does it expire? ) Tj
+1 0 0 1 29 633.8 Tm
+1 0 0 1 29 642.8 Tm
+1 0 0 1 422.4 645.8 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 29 630.8 Tm
+()'
+(    When may your present employer be contacted? ) Tj
+1 0 0 1 29 618.8 Tm
+1 0 0 1 29 627.8 Tm
+1 0 0 1 422.4 630.8 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 422.4 610.8 Tm
+/Times-Bold 10 Tf
+12 TL
+1 0 0 1 29 598.8 Tm
+(Professional Status  ) '
+1 0 0 1 422.4 598.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 586.8 Tm
+()'
+(*  Have you obtained tenure status in any other School District? ) Tj
+1 0 0 1 29 574.8 Tm
+1 0 0 1 29 583.8 Tm
+1 0 0 1 422.4 586.8 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 571.8 Tm
+()'
+(    If Yes, where? ) Tj
+1 0 0 1 29 559.8 Tm
+1 0 0 1 29 568.8 Tm
+1 0 0 1 422.4 571.8 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 29 556.8 Tm
+()'
+(    When? ) Tj
+1 0 0 1 29 544.8 Tm
+1 0 0 1 29 553.8 Tm
+1 0 0 1 422.4 556.8 Tm
+0 0 0 rg
+0 0 0 rg
+1 0 0 1 29 541.8 Tm
+()'
+(*  Have you ever been denied tenure? ) Tj
+1 0 0 1 29 529.8 Tm
+1 0 0 1 29 538.8 Tm
+1 0 0 1 422.4 541.8 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 526.8 Tm
+1 0 0 1 29 514.8 Tm
+()'
+(If Yes, explain: ) Tj
+1 0 0 1 29 502.8 Tm
+1 0 0 1 29 497.8 Tm
+1 0 0 1 29 497.8 Tm
+1 0 0 1 29 485.8 Tm
+1 0 0 1 29 485.8 Tm
+1 0 0 1 29 490.8 Tm
+1 0 0 1 422.4 490.8 Tm
+1 0 0 1 29 478.8 Tm
+()'
+(*  Have you ever had a teaching certificate or teaching license revoked or suspended? ) Tj
+1 0 0 1 29 466.8 Tm
+1 0 0 1 29 475.8 Tm
+1 0 0 1 422.4 478.8 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 463.8 Tm
+1 0 0 1 29 451.8 Tm
+()'
+(If Yes, explain: ) Tj
+1 0 0 1 29 439.8 Tm
+1 0 0 1 29 434.8 Tm
+1 0 0 1 29 434.8 Tm
+1 0 0 1 29 422.8 Tm
+1 0 0 1 29 422.8 Tm
+1 0 0 1 29 427.8 Tm
+1 0 0 1 422.4 427.8 Tm
+1 0 0 1 29 415.8 Tm
+()'
+(*  Have you ever failed to be rehired, been asked to resign a position, resigned to avoid ) Tj
+T*
+(termination, or terminated from employment? ) Tj
+1 0 0 1 29 391.8 Tm
+1 0 0 1 29 400.8 Tm
+1 0 0 1 422.4 415.8 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 388.8 Tm
+1 0 0 1 29 376.8 Tm
+()'
+(If Yes, explain: ) Tj
+1 0 0 1 29 364.8 Tm
+1 0 0 1 29 359.8 Tm
+1 0 0 1 29 359.8 Tm
+1 0 0 1 29 347.8 Tm
+1 0 0 1 29 347.8 Tm
+1 0 0 1 29 352.8 Tm
+1 0 0 1 422.4 352.8 Tm
+1 0 0 1 422.4 335.8 Tm
+1 0 0 1 29 323.8 Tm
+()'
+(*  Are you a relative of any board member, administrator, or supervisor who is currently ) Tj
+T*
+(serving the School District? ) Tj
+1 0 0 1 29 299.8 Tm
+1 0 0 1 29 308.8 Tm
+1 0 0 1 422.4 323.8 Tm
+0 0 0 rg
+(Yes  ) '
+0 0 0 rg
+1 0 0 1 29 296.8 Tm
+()'
+(    Name: ) Tj
+1 0 0 1 29 284.8 Tm
+1 0 0 1 29 293.8 Tm
+1 0 0 1 422.4 296.8 Tm
+0 0 0 rg
+(Katie Johnson  ) '
+0 0 0 rg
+1 0 0 1 29 281.8 Tm
+()'
+(    Position: ) Tj
+1 0 0 1 29 269.8 Tm
+1 0 0 1 29 278.8 Tm
+1 0 0 1 422.4 281.8 Tm
+0 0 0 rg
+(Book Keeper/Secretary  ) '
+0 0 0 rg
+1 0 0 1 29 266.8 Tm
+()'
+(    Relationship: ) Tj
+1 0 0 1 29 254.8 Tm
+1 0 0 1 29 263.8 Tm
+1 0 0 1 422.4 266.8 Tm
+0 0 0 rg
+(Cousin  ) '
+0 0 0 rg
+1 0 0 1 422.4 246.8 Tm
+1 0 0 1 29 234.8 Tm
+()'
+(*  Can you perform all the essential job function\(s\) of the position\(s\) for which you are ) Tj
+T*
+(applying, with or without reasonable accommodation? ) Tj
+1 0 0 1 29 210.8 Tm
+1 0 0 1 29 219.8 Tm
+1 0 0 1 422.4 234.8 Tm
+0 0 0 rg
+(Yes  ) '
+0 0 0 rg
+1 0 0 1 29 207.8 Tm
+1 0 0 1 29 195.8 Tm
+()'
+(List any accommodations: ) Tj
+1 0 0 1 29 183.8 Tm
+1 0 0 1 29 178.8 Tm
+1 0 0 1 29 178.8 Tm
+1 0 0 1 29 166.8 Tm
+1 0 0 1 29 166.8 Tm
+1 0 0 1 29 171.8 Tm
+1 0 0 1 422.4 171.8 Tm
+1 0 0 1 422.4 154.8 Tm
+1 0 0 1 29 130.8 Tm
+ET
+endstream
+endobj
+44 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+1.2 w
+25 690.8 m
+587 690.8 l
+S
+0.002 w
+415 674.8 m
+587 674.8 l
+S
+0.002 w
+415 674.8 m
+415 659.8 l
+S
+0.002 w
+587 674.8 m
+587 659.8 l
+S
+0.002 w
+415 659.8 m
+587 659.8 l
+S
+0.002 w
+415 659.8 m
+587 659.8 l
+S
+0.002 w
+415 659.8 m
+415 644.8 l
+S
+0.002 w
+587 659.8 m
+587 644.8 l
+S
+0.002 w
+415 644.8 m
+587 644.8 l
+S
+0.002 w
+415 644.8 m
+587 644.8 l
+S
+0.002 w
+415 644.8 m
+415 629.8 l
+S
+0.002 w
+587 644.8 m
+587 629.8 l
+S
+0.002 w
+415 629.8 m
+587 629.8 l
+S
+0.002 w
+415 629.8 m
+587 629.8 l
+S
+0.002 w
+415 629.8 m
+415 614.8 l
+S
+0.002 w
+587 629.8 m
+587 614.8 l
+S
+0.002 w
+415 614.8 m
+587 614.8 l
+S
+0.01 w
+25 605.8 m
+587 605.8 l
+S
+0.002 w
+415 585.8 m
+587 585.8 l
+S
+0.002 w
+415 585.8 m
+415 570.8 l
+S
+0.002 w
+587 585.8 m
+587 570.8 l
+S
+0.002 w
+415 570.8 m
+587 570.8 l
+S
+0.002 w
+415 570.8 m
+587 570.8 l
+S
+0.002 w
+415 570.8 m
+415 555.8 l
+S
+0.002 w
+587 570.8 m
+587 555.8 l
+S
+0.002 w
+415 555.8 m
+587 555.8 l
+S
+0.002 w
+415 555.8 m
+587 555.8 l
+S
+0.002 w
+415 555.8 m
+415 540.8 l
+S
+0.002 w
+587 555.8 m
+587 540.8 l
+S
+0.002 w
+415 540.8 m
+587 540.8 l
+S
+0.002 w
+415 540.8 m
+587 540.8 l
+S
+0.002 w
+415 540.8 m
+415 525.8 l
+S
+0.002 w
+587 540.8 m
+587 525.8 l
+S
+0.002 w
+415 525.8 m
+587 525.8 l
+S
+0.2 w
+25 497.8 m
+587 497.8 l
+S
+0.2 w
+25 484.13 m
+587 484.13 l
+S
+0.2 w
+25 497.8 m
+25 484.13 l
+S
+0.2 w
+587 497.8 m
+587 484.13 l
+S
+0.002 w
+415 477.8 m
+587 477.8 l
+S
+0.002 w
+415 477.8 m
+415 462.8 l
+S
+0.002 w
+587 477.8 m
+587 462.8 l
+S
+0.002 w
+415 462.8 m
+587 462.8 l
+S
+0.2 w
+25 434.8 m
+587 434.8 l
+S
+0.2 w
+25 421.13 m
+587 421.13 l
+S
+0.2 w
+25 434.8 m
+25 421.13 l
+S
+0.2 w
+587 434.8 m
+587 421.13 l
+S
+0.002 w
+415 414.8 m
+587 414.8 l
+S
+0.002 w
+415 414.8 m
+415 387.8 l
+S
+0.002 w
+587 414.8 m
+587 387.8 l
+S
+0.002 w
+415 387.8 m
+587 387.8 l
+S
+0.2 w
+25 359.8 m
+587 359.8 l
+S
+0.2 w
+25 346.13 m
+587 346.13 l
+S
+0.2 w
+25 359.8 m
+25 346.13 l
+S
+0.2 w
+587 359.8 m
+587 346.13 l
+S
+0.01 w
+25 330.8 m
+587 330.8 l
+S
+0.002 w
+415 322.8 m
+587 322.8 l
+S
+0.002 w
+415 322.8 m
+415 295.8 l
+S
+0.002 w
+587 322.8 m
+587 295.8 l
+S
+0.002 w
+415 295.8 m
+587 295.8 l
+S
+0.002 w
+415 295.8 m
+587 295.8 l
+S
+0.002 w
+415 295.8 m
+415 280.8 l
+S
+0.002 w
+587 295.8 m
+587 280.8 l
+S
+0.002 w
+415 280.8 m
+587 280.8 l
+S
+0.002 w
+415 280.8 m
+587 280.8 l
+S
+0.002 w
+415 280.8 m
+415 265.8 l
+S
+0.002 w
+587 280.8 m
+587 265.8 l
+S
+0.002 w
+415 265.8 m
+587 265.8 l
+S
+0.002 w
+415 265.8 m
+587 265.8 l
+S
+0.002 w
+415 265.8 m
+415 250.8 l
+S
+0.002 w
+587 265.8 m
+587 250.8 l
+S
+0.002 w
+415 250.8 m
+587 250.8 l
+S
+0.01 w
+25 241.8 m
+587 241.8 l
+S
+0.002 w
+415 233.8 m
+587 233.8 l
+S
+0.002 w
+415 233.8 m
+415 206.8 l
+S
+0.002 w
+587 233.8 m
+587 206.8 l
+S
+0.002 w
+415 206.8 m
+587 206.8 l
+S
+0.2 w
+25 178.8 m
+587 178.8 l
+S
+0.2 w
+25 165.13 m
+587 165.13 l
+S
+0.2 w
+25 178.8 m
+25 165.13 l
+S
+0.2 w
+587 178.8 m
+587 165.13 l
+S
+0.01 w
+25 149.8 m
+587 149.8 l
+S
+endstream
+endobj
+
+45 0 obj
+[ ]
+endobj
+
+100015 0 obj <<
+/Parent 2 0 R
+/Dest [42 0 R /XYZ null 714.2 null]
+/Title (Disclosures)
+/Prev 100014 0 R
+/Next 100016 0 R
+>>
+endobj
+
+46 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 48 0 R 47 0 R ]
+/Annots 49 0 R>>
+endobj
+47 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 9 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 29 726.2 Tm
+1 0 0 1 25 720.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Legal Information  ) '
+1 0 0 1 29 705.8 Tm
+1 0 0 1 29 719.8 Tm
+1 0 0 1 25 713.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 701.8 Tm
+1 0 0 1 29 699.8 Tm
+1 0 0 1 29 699.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 699.8 Tm
+()'
+(Please note: Applicants are not obligated to disclose sealed or expunged records of conviction or arrest. ) Tj
+1 0 0 1 422.4 699.8 Tm
+1 0 0 1 29 687.8 Tm
+()'
+(*  Are you eligible to work in the United States? ) Tj
+1 0 0 1 29 675.8 Tm
+1 0 0 1 29 684.8 Tm
+1 0 0 1 422.4 687.8 Tm
+0 0 0 rg
+(Yes  ) '
+0 0 0 rg
+1 0 0 1 422.4 667.8 Tm
+1 0 0 1 29 655.8 Tm
+()'
+(*  Have you ever been arrested, charged or convicted of a criminal offense other than a minor ) Tj
+T*
+(traffic violation? ) Tj
+1 0 0 1 29 631.8 Tm
+1 0 0 1 29 640.8 Tm
+1 0 0 1 422.4 655.8 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 628.8 Tm
+1 0 0 1 29 616.8 Tm
+()'
+(If yes, explain, giving dates: ) Tj
+1 0 0 1 29 604.8 Tm
+1 0 0 1 29 599.8 Tm
+1 0 0 1 29 599.8 Tm
+1 0 0 1 29 587.8 Tm
+1 0 0 1 29 587.8 Tm
+1 0 0 1 29 592.8 Tm
+1 0 0 1 422.4 592.8 Tm
+1 0 0 1 29 580.8 Tm
+()'
+() Tj
+/Times-Roman 6 Tf
+7.2 TL
+(Please Note: A conviction will not necessarily bar you from employment. Facts, such as date of occurrence and rehabilitation will be considered. This information will be used only for job-related purposes and only to the ) Tj
+T*
+(extent permitted by applicable law.) Tj
+/Times-Roman 10 Tf
+12 TL
+0 0 0 rg
+1 0 0 1 422.4 580.8 Tm
+1 0 0 1 422.4 556.6 Tm
+1 0 0 1 29 544.6 Tm
+()'
+(*  Have you ever had any indicated finding of child abuse filed in your name? ) Tj
+1 0 0 1 29 532.6 Tm
+1 0 0 1 29 541.6 Tm
+1 0 0 1 422.4 544.6 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 529.6 Tm
+1 0 0 1 29 517.6 Tm
+()'
+(If yes, explain, giving dates: ) Tj
+1 0 0 1 29 505.6 Tm
+1 0 0 1 29 500.6 Tm
+1 0 0 1 29 500.6 Tm
+1 0 0 1 29 488.6 Tm
+1 0 0 1 29 488.6 Tm
+1 0 0 1 29 493.6 Tm
+1 0 0 1 422.4 493.6 Tm
+1 0 0 1 422.4 476.6 Tm
+1 0 0 1 29 464.6 Tm
+()'
+(*  Does your name appear on any Sex Offender Database in any state or country?) Tj
+1 0 0 1 29 452.6 Tm
+T*
+1 0 0 1 29 440.6 Tm
+1 0 0 1 29 449.6 Tm
+1 0 0 1 422.4 464.6 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 422.4 432.6 Tm
+1 0 0 1 29 408.6 Tm
+1 0 0 1 25 402.6 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Equal Opportunity Employer  ) '
+1 0 0 1 29 388.2 Tm
+1 0 0 1 29 402.2 Tm
+1 0 0 1 25 396.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 384.2 Tm
+1 0 0 1 29 394.2 Tm
+1 0 0 1 29 394.2 Tm
+1 0 0 1 29 382.2 Tm
+()'
+(Jefferson School District 251 is an Equal Opportunity Employer. Jefferson School District 251 ensures equal employment opportunities ) Tj
+T*
+(regardless of race, creed, gender, color, national origin, religion, age, sexual orientation or disability. Jefferson School District 251 has a ) Tj
+T*
+(policy of active recruitment of qualified minority teachers and non-certified employees. Any individual needing assistance in making ) Tj
+T*
+(application for any opening should contact the Department of Human Resources. ) Tj
+1 0 0 1 422.4 382.2 Tm
+1 0 0 1 422.4 329.2 Tm
+1 0 0 1 29 305.2 Tm
+1 0 0 1 25 299.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Applicant's Acknowledgment and Agreement  ) '
+1 0 0 1 29 284.8 Tm
+1 0 0 1 29 298.8 Tm
+1 0 0 1 25 292.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 280.8 Tm
+1 0 0 1 29 290.8 Tm
+1 0 0 1 29 290.8 Tm
+1 0 0 1 29 278.8 Tm
+()'
+(By checking the box below, candidate authorizes the school district to conduct an investigation of candidate pursuant to The School ) Tj
+T*
+(Code to determine whether candidate has been convicted of any criminal or drug offenses as set forth in such statute, and, upon ) Tj
+T*
+(request, agrees to execute an investigation authorization form as a condition for candidate's employment. The School Code also ) Tj
+T*
+(stipulates that the School District perform a check on the Statewide Sex Offender Database. Candidate may not be employed unless ) Tj
+T*
+(such investigations have been initiated.) Tj
+1 0 0 1 29 218.8 Tm
+T*
+() Tj
+1 0 0 1 29 206.8 Tm
+T*
+(I certify that the information given by me in this application is true in all respects, and I agree that if the information given is found to ) Tj
+T*
+(be false in any way, it shall be considered sufficient cause for denial of employment or discharge. I authorize the use of any ) Tj
+T*
+(information in the application to verify my statement, and I authorize past employers, all references and any other person to answer all ) Tj
+T*
+(questions asked concerning my ability, character, reputation, and previous employment record. I release all such persons from any ) Tj
+T*
+(liability or damages on account of having furnished such information. ) Tj
+1 0 0 1 422.4 278.8 Tm
+1 0 0 1 29 134.8 Tm
+ET
+endstream
+endobj
+48 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+1.2 w
+25 702.8 m
+587 702.8 l
+S
+0.002 w
+415 686.8 m
+587 686.8 l
+S
+0.002 w
+415 686.8 m
+415 671.8 l
+S
+0.002 w
+587 686.8 m
+587 671.8 l
+S
+0.002 w
+415 671.8 m
+587 671.8 l
+S
+0.01 w
+25 662.8 m
+587 662.8 l
+S
+0.002 w
+415 654.8 m
+587 654.8 l
+S
+0.002 w
+415 654.8 m
+415 627.8 l
+S
+0.002 w
+587 654.8 m
+587 627.8 l
+S
+0.002 w
+415 627.8 m
+587 627.8 l
+S
+0.2 w
+25 599.8 m
+587 599.8 l
+S
+0.2 w
+25 586.13 m
+587 586.13 l
+S
+0.2 w
+25 599.8 m
+25 586.13 l
+S
+0.2 w
+587 599.8 m
+587 586.13 l
+S
+0.01 w
+25 551.6 m
+587 551.6 l
+S
+0.002 w
+415 543.6 m
+587 543.6 l
+S
+0.002 w
+415 543.6 m
+415 528.6 l
+S
+0.002 w
+587 543.6 m
+587 528.6 l
+S
+0.002 w
+415 528.6 m
+587 528.6 l
+S
+0.2 w
+25 500.6 m
+587 500.6 l
+S
+0.2 w
+25 486.93 m
+587 486.93 l
+S
+0.2 w
+25 500.6 m
+25 486.93 l
+S
+0.2 w
+587 500.6 m
+587 486.93 l
+S
+0.01 w
+25 471.6 m
+587 471.6 l
+S
+0.002 w
+415 463.6 m
+587 463.6 l
+S
+0.002 w
+415 463.6 m
+415 436.6 l
+S
+0.002 w
+587 463.6 m
+587 436.6 l
+S
+0.002 w
+415 436.6 m
+587 436.6 l
+S
+0.01 w
+25 427.6 m
+587 427.6 l
+S
+1.2 w
+25 385.2 m
+587 385.2 l
+S
+0.01 w
+25 324.2 m
+587 324.2 l
+S
+1.2 w
+25 281.8 m
+587 281.8 l
+S
+endstream
+endobj
+
+49 0 obj
+[ ]
+endobj
+
+100016 0 obj <<
+/Parent 2 0 R
+/Dest [46 0 R /XYZ null 726.2 null]
+/Title (Legal Information)
+/Prev 100015 0 R
+/Next 100017 0 R
+>>
+endobj
+100017 0 obj <<
+/Parent 2 0 R
+/Dest [46 0 R /XYZ null 408.6 null]
+/Title (Equal Opportunity Employer)
+/Prev 100016 0 R
+/Next 100018 0 R
+>>
+endobj
+100018 0 obj <<
+/Parent 2 0 R
+/Dest [46 0 R /XYZ null 305.2 null]
+/Title (Applicant's Acknowledgment and Agreement)
+/Prev 100017 0 R
+/Next 100019 0 R
+>>
+endobj
+
+50 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 52 0 R 51 0 R ]
+/Annots 53 0 R>>
+endobj
+51 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 10 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 29 726.2 Tm
+%%% Max Depth = 680
+1 0 0 1 29 726.2 Tm
+0 0 0 rg
+(I, Dimitri Lavin, agree to all of the terms above. )'
+0 0 0 rg
+1 0 0 1 310 726.2 Tm
+1 0 0 1 322 726.2 Tm
+(I agree  ) '
+1 0 0 1 29 714.2 Tm
+1 0 0 1 29 702.2 Tm
+1 0 0 1 29 690.2 Tm
+1 0 0 1 29 678.2 Tm
+1 0 0 1 29 678.2 Tm
+1 0 0 1 25 672.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Classified Legal  ) '
+1 0 0 1 29 657.8 Tm
+1 0 0 1 29 671.8 Tm
+1 0 0 1 25 665.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 653.8 Tm
+1 0 0 1 29 651.8 Tm
+1 0 0 1 29 651.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 639.8 Tm
+1 0 0 1 29 639.8 Tm
+%%% Max Depth = 680
+1 0 0 1 29 639.8 Tm
+1 0 0 1 41 639.8 Tm
+1 0 0 1 310 639.8 Tm
+0 0 0 rg
+(  I, Dimitri Lavin, understand that School District #251 follows an )'
+("employment at will" policy, in that I or the employer may )'
+(terminate my employment at any time, or for any reason consistent )'
+(with applicable state or federal law; this "employment at will" )'
+(policy cannot be changed verbally or in writing unless the change )'
+(is specifically authorized in writing and expressly approved by the )'
+(Board of Trustees of District #251.  I understand that this )'
+(application is not a contract of employment.  I understand that )'
+(federal law prohibits the employment of unauthorized aliens; all )'
+(persons hired must submit satisfactory proof of employment )'
+(authorization and identity, failure to submit such proof will result )'
+(in denial of employment. )'
+0 0 0 rg
+1 0 0 1 29 495.8 Tm
+1 0 0 1 29 483.8 Tm
+1 0 0 1 29 471.8 Tm
+1 0 0 1 29 471.8 Tm
+%%% Max Depth = 680
+1 0 0 1 29 471.8 Tm
+1 0 0 1 41 471.8 Tm
+1 0 0 1 216.33 471.8 Tm
+0 0 0 rg
+(  I, Dimitri Lavin, understand this )'
+(application will be kept on file for a period )'
+(of one year.  After that time, if I wish to be )'
+(considered for employment, I must submit a )'
+(new application.  I understand that it is my )'
+(responsibility to notify the district office if )'
+(I would like to be considered for a position )'
+(other than the position listed on this )'
+(application. )'
+0 0 0 rg
+1 0 0 1 29 363.8 Tm
+1 0 0 1 29 351.8 Tm
+1 0 0 1 29 339.8 Tm
+1 0 0 1 29 339.8 Tm
+%%% Max Depth = 680
+1 0 0 1 29 339.8 Tm
+1 0 0 1 41 339.8 Tm
+1 0 0 1 216.33 339.8 Tm
+0 0 0 rg
+(  I, Dimitri Lavin, understand that if I am )'
+(selected for employment that I will submit )'
+(to be fingerprinted and I understand that )'
+(the finger prints will be used in conjunction )'
+(with a mandatory criminal background )'
+(investigation. )'
+0 0 0 rg
+1 0 0 1 29 267.8 Tm
+1 0 0 1 29 255.8 Tm
+1 0 0 1 29 243.8 Tm
+1 0 0 1 29 243.8 Tm
+%%% Max Depth = 680
+1 0 0 1 29 243.8 Tm
+1 0 0 1 41 243.8 Tm
+1 0 0 1 216.33 243.8 Tm
+0 0 0 rg
+(  I, Dimitri Lavin, understand that the )'
+(employer will thoroughly investigate my )'
+(work and personal history and verify all )'
+(data given on this application, on related )'
+(papers, and in interviews.  I authorize all )'
+(individuals, schools, and firms named )'
+(therein, except my current employer if so )'
+(noted, to provide any information requested )'
+(about me, and I release them from all )'
+(liability for damage in providing this )'
+(information. )'
+0 0 0 rg
+1 0 0 1 29 111.8 Tm
+1 0 0 1 29 99.8 Tm
+1 0 0 1 29 94.8 Tm
+1 0 0 1 29 70.8 Tm
+ET
+endstream
+endobj
+52 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+0.2 w
+309 714.2 m
+309 723.2 l
+S
+0.2 w
+309 723.2 m
+318 723.2 l
+S
+0.2 w
+318 723.2 m
+318 714.2 l
+S
+0.2 w
+318 714.2 m
+309 714.2 l
+S
+0.9 w
+310 715.2 m
+317 722.2 l
+S
+0.9 w
+310 722.2 m
+317 715.2 l
+S
+1.2 w
+25 654.8 m
+587 654.8 l
+S
+0.2 w
+28 627.8 m
+28 636.8 l
+S
+0.2 w
+28 636.8 m
+37 636.8 l
+S
+0.2 w
+37 636.8 m
+37 627.8 l
+S
+0.2 w
+37 627.8 m
+28 627.8 l
+S
+0.9 w
+29 628.8 m
+36 635.8 l
+S
+0.9 w
+29 635.8 m
+36 628.8 l
+S
+0.2 w
+28 459.8 m
+28 468.8 l
+S
+0.2 w
+28 468.8 m
+37 468.8 l
+S
+0.2 w
+37 468.8 m
+37 459.8 l
+S
+0.2 w
+37 459.8 m
+28 459.8 l
+S
+0.9 w
+29 460.8 m
+36 467.8 l
+S
+0.9 w
+29 467.8 m
+36 460.8 l
+S
+0.2 w
+28 327.8 m
+28 336.8 l
+S
+0.2 w
+28 336.8 m
+37 336.8 l
+S
+0.2 w
+37 336.8 m
+37 327.8 l
+S
+0.2 w
+37 327.8 m
+28 327.8 l
+S
+0.9 w
+29 328.8 m
+36 335.8 l
+S
+0.9 w
+29 335.8 m
+36 328.8 l
+S
+0.2 w
+28 231.8 m
+28 240.8 l
+S
+0.2 w
+28 240.8 m
+37 240.8 l
+S
+0.2 w
+37 240.8 m
+37 231.8 l
+S
+0.2 w
+37 231.8 m
+28 231.8 l
+S
+0.9 w
+29 232.8 m
+36 239.8 l
+S
+0.9 w
+29 239.8 m
+36 232.8 l
+S
+0.01 w
+25 89.8 m
+587 89.8 l
+S
+endstream
+endobj
+
+53 0 obj
+[ ]
+endobj
+
+100019 0 obj <<
+/Parent 2 0 R
+/Dest [50 0 R /XYZ null 678.2 null]
+/Title (Classified Legal)
+/Prev 100018 0 R
+/Next 100020 0 R
+>>
+endobj
+
+54 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 56 0 R 55 0 R ]
+/Annots 57 0 R>>
+endobj
+55 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 11 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 29 726.2 Tm
+%%% Max Depth = 680
+1 0 0 1 29 726.2 Tm
+1 0 0 1 41 726.2 Tm
+1 0 0 1 310 726.2 Tm
+0 0 0 rg
+( I, Dimitri Lavin, certify that all the statements herein are true and )'
+(understand that any falsification or willful omission shall be )'
+(sufficient cause for dismissal or refusal of employment. )'
+0 0 0 rg
+1 0 0 1 29 690.2 Tm
+1 0 0 1 29 678.2 Tm
+1 0 0 1 29 666.2 Tm
+1 0 0 1 29 654.2 Tm
+1 0 0 1 29 654.2 Tm
+1 0 0 1 25 648.2 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Certified Legal  ) '
+1 0 0 1 29 633.8 Tm
+1 0 0 1 29 647.8 Tm
+1 0 0 1 25 641.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 629.8 Tm
+1 0 0 1 29 627.8 Tm
+1 0 0 1 29 627.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 615.8 Tm
+1 0 0 1 29 615.8 Tm
+%%% Max Depth = 680
+1 0 0 1 29 615.8 Tm
+/Times-Bold 10 Tf
+12 TL
+(1. Is anyone living at the same address required to register for )'
+(Sex Offender Registry?  ) '
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 310 615.8 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 591.8 Tm
+1 0 0 1 29 579.8 Tm
+1 0 0 1 29 574.8 Tm
+/Times-Bold 10 Tf
+12 TL
+1 0 0 1 29 562.8 Tm
+(2. Notice: Employment will be based on the following procedures unless otherwise )'
+(noted on vacancy listing:  ) '
+1 0 0 1 422.4 562.8 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 422.4 533.8 Tm
+1 0 0 1 29 521.8 Tm
+()'
+() Tj
+() Tj
+(*  ) '
+(Preliminary Screening of applicants will be based on ability to meet job description requirements as evidenced by completed ) Tj
+T*
+(application, placement files, and transcripts.   Supportive job-related information not on this form or in credentials may be submitted ) Tj
+T*
+(by the applicant.  \(Application materials received at the district office more than 10 days after the application deadline will not be ) Tj
+T*
+(considered.\)) Tj
+1 0 0 1 422.4 521.8 Tm
+1 0 0 1 29 473.8 Tm
+()'
+() Tj
+() Tj
+(*  ) '
+( Additional Data from the candidate or from reference after step one, such as letters of recommendation and other information as ) Tj
+T*
+(determined by the district office.) Tj
+1 0 0 1 422.4 473.8 Tm
+1 0 0 1 29 449.8 Tm
+()'
+() Tj
+() Tj
+(*  ) '
+(Finalists may be required to attend a personal interview at the district office.) Tj
+1 0 0 1 422.4 449.8 Tm
+1 0 0 1 29 437.8 Tm
+()'
+() Tj
+() Tj
+(*  ) '
+(Notification of Employment will be sent to the candidate after being approved by the Board of Trustees. No offer of employment is ) Tj
+T*
+(valid until the board has approved employment. It is the candidates' responsibility to check on employment status. Notice of vacancy ) Tj
+T*
+(closings will be remitted to teacher placement centers and district postings only. I hereby certify that the information herein is a true ) Tj
+T*
+(and complete statement of my personal and professional record to date. I authorize all individuals, schools, and firms named therein, ) Tj
+T*
+(except my current employer if so noted, to provide any information requested about me, and I release them from all liability for ) Tj
+T*
+(damage in providing this information.) Tj
+1 0 0 1 422.4 437.8 Tm
+1 0 0 1 422.4 360.8 Tm
+1 0 0 1 29 336.8 Tm
+1 0 0 1 29 336.8 Tm
+%%% Max Depth = 680
+1 0 0 1 29 336.8 Tm
+/Times-Bold 10 Tf
+12 TL
+(I, Dimitri Lavin, agree to all of the terms above. )'
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 310 336.8 Tm
+0 0 0 rg
+(Yes  ) '
+0 0 0 rg
+1 0 0 1 29 324.8 Tm
+1 0 0 1 29 312.8 Tm
+1 0 0 1 29 300.8 Tm
+1 0 0 1 29 288.8 Tm
+1 0 0 1 29 288.8 Tm
+1 0 0 1 25 282.8 Tm
+/Helvetica-Bold 12 Tf
+14.4 TL
+(Veteran's Preference  ) '
+1 0 0 1 29 268.4 Tm
+1 0 0 1 29 282.4 Tm
+1 0 0 1 25 276.4 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 264.4 Tm
+1 0 0 1 29 262.4 Tm
+1 0 0 1 29 262.4 Tm
+/Times-Roman 10 Tf
+12 TL
+/Times-Bold 10 Tf
+12 TL
+1 0 0 1 29 262.4 Tm
+(Veteran's Preference  ) '
+1 0 0 1 422.4 262.4 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 422.4 245.4 Tm
+1 0 0 1 29 221.4 Tm
+1 0 0 1 29 221.4 Tm
+%%% Max Depth = 680
+1 0 0 1 29 221.4 Tm
+0 0 0 rg
+(Are you claiming Veteran's Preference?  ) '
+0 0 0 rg
+1 0 0 1 29 209.4 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 197.4 Tm
+0 0 0 rg
+( If Yes, please provide a copy of your Form DD214, and please request, complete, and submit the Veteran's Preference Form with this )'
+(application. )'
+0 0 0 rg
+1 0 0 1 29 173.4 Tm
+0 0 0 rg
+(Have you claimed such preference in prior applications with the school district?  ) '
+0 0 0 rg
+1 0 0 1 29 161.4 Tm
+0 0 0 rg
+(No  ) '
+0 0 0 rg
+1 0 0 1 29 149.4 Tm
+1 0 0 1 29 137.4 Tm
+1 0 0 1 29 132.4 Tm
+1 0 0 1 29 108.4 Tm
+ET
+endstream
+endobj
+56 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+0.2 w
+28 714.2 m
+28 723.2 l
+S
+0.2 w
+28 723.2 m
+37 723.2 l
+S
+0.2 w
+37 723.2 m
+37 714.2 l
+S
+0.2 w
+37 714.2 m
+28 714.2 l
+S
+0.9 w
+29 715.2 m
+36 722.2 l
+S
+0.9 w
+29 722.2 m
+36 715.2 l
+S
+1.2 w
+25 630.8 m
+587 630.8 l
+S
+0.01 w
+25 569.8 m
+587 569.8 l
+S
+0.01 w
+25 528.8 m
+587 528.8 l
+S
+0.01 w
+25 355.8 m
+587 355.8 l
+S
+1.2 w
+25 265.4 m
+587 265.4 l
+S
+0.01 w
+25 240.4 m
+587 240.4 l
+S
+0.01 w
+25 127.4 m
+587 127.4 l
+S
+endstream
+endobj
+
+57 0 obj
+[ ]
+endobj
+
+100020 0 obj <<
+/Parent 2 0 R
+/Dest [54 0 R /XYZ null 654.2 null]
+/Title (Certified Legal)
+/Prev 100019 0 R
+/Next 100021 0 R
+>>
+endobj
+100021 0 obj <<
+/Parent 2 0 R
+/Dest [54 0 R /XYZ null 288.8 null]
+/Title (Veteran’s Preference)
+/Prev 100020 0 R
+/Next 100022 0 R
+>>
+endobj
+
+58 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Contents [ 60 0 R 59 0 R ]
+/Annots 61 0 R>>
+endobj
+59 0 obj
+<< /Length 0 >>
+stream
+BT
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 767 Tm
+/Helvetica-Bold 14 Tf
+16.8 TL
+1 0 0 1 131.52 767 Tm
+(Jefferson School District 251 Online Application     ) '
+1 0 0 1 29 750.2 Tm
+1 0 0 1 25 750.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 750.2 Tm
+(Lavin, Dimitri   ) '
+1 0 0 1 450.50 750.2 Tm
+(Date Submitted: 9/4/2023  ) '
+1 0 0 1 250 40 Tm
+(Page 12 of  12)'
+/Times-Roman 8 Tf
+9.6 TL
+1 0 0 1 30 37 Tm
+(Generated at 9/4/2023 7:14:55 PM Mountain Standard Time)'
+1 0 0 1 29 738.2 Tm
+/Times-Roman 10 Tf
+12 TL
+1 0 0 1 29 726.2 Tm
+1 0 0 1 29 726.2 Tm
+%%% Max Depth = 680
+1 0 0 1 29 726.2 Tm
+0 0 0 rg
+( Idaho law \(Idaho Code 65-501, et seq. as amended in 2006\) provides Veteran's Preference for certain veterans or their eligible spouses )'
+(who: )'
+0 0 0 rg
+1 0 0 1 29 702.2 Tm
+0 0 0 rg
+( )'
+(Have been in active service in the armed forces of the United States during one or more of the times periods shown below or have been )'
+(awarded an Armed Forces Expditionary Medal or )'
+( )'
+(Are disabled veterans who served on active duty in the armed forces at any time, or )'
+( )'
+(Are Purple Heart recipients, or )'
+( )'
+(Are the widow or widower of such individuals and who have not remarried, or )'
+( )'
+(Are qualifying spouses or eligible disabled veterans who cannot qualify for any public employment because of a service-connected )'
+(disability )'
+( )'
+( )'
+0 0 0 rg
+1 0 0 1 29 534.2 Tm
+1 0 0 1 29 522.2 Tm
+1 0 0 1 29 517.2 Tm
+1 0 0 1 29 493.2 Tm
+ET
+endstream
+endobj
+60 0 obj
+<< /Length 0 >>
+stream
+0.2 w
+25 750.2 m
+587 750.2 l
+S
+1 w
+25 736.2 m
+587 736.2 l
+S
+0.01 w
+25 512.2 m
+587 512.2 l
+S
+endstream
+endobj
+
+61 0 obj
+[ ]
+endobj
+
+%%PAGES%%48
+%%PAGELINKS%%14 0 R 18 0 R 22 0 R 26 0 R 30 0 R 34 0 R 38 0 R 42 0 R 46 0 R 50 0 R 54 0 R 58 0 R  EOL
+100022 0 obj <<
+/Parent 2 0 R
+/Title (---)
+/Prev 100021 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Outlines
+/Count 23
+/First 100000 0 R
+/Last 100022 0 R
+>>
+endobj
+3 0 obj
+<<
+/Type /Pages
+/Count 12
+/Kids [14 0 R 18 0 R 22 0 R 26 0 R 30 0 R 34 0 R 38 0 R 42 0 R 46 0 R 50 0 R 54 0 R 58 0 R  ]
+/Resources 
+<< 
+/Font 
+<<
+/Times-Roman 4 0 R
+/Times-Bold 5 0 R
+/Helvetica 6 0 R
+/Helvetica-Bold 7 0 R
+/Barcode39 8 0 R
+>> 
+/ProcSet [/PDF/Text/ImageB/ImageC/ImageI] >>
+/MediaBox [0 0 612 792]
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /Times-Roman
+/BaseFont /Times-Roman
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /Times-Bold
+/BaseFont /Times-Bold
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /Helvetica
+/BaseFont /Helvetica
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /Helvetica-Bold
+/BaseFont /Helvetica-Bold
+>>
+endobj
+8 0 obj
+<</Type/Font/Subtype/TrueType/Name/Barcode39/BaseFont/BCDEEE+Free3of9/Encoding/WinAnsiEncoding/FontDescriptor 10 0 R/FirstChar 32/LastChar 90/Widths 9 0 R>>
+endobj
+9 0 obj
+[ 383 0 0 0 0 0 0 0 0 0 383 0 0 0 0 0 383 383 383 383 383 383 383 383 383 383 0 0 0 0 0 0 0 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383 383] 
+endobj
+10 0 obj
+<</Type/FontDescriptor/FontName/BCDEEE+Free3of9/Flags 32/ItalicAngle 0/Ascent 752/Descent 0/CapHeight 752/AvgWidth 383/MaxWidth 357/FontWeight 400/XHeight 250/StemV 38/FontBBox[ 0 0 357 752] /FontFile2 11 0 R>>
+endobj
+11 0 obj
+<</Metadata 12 0 R/Filter/FlateDecode/Length 1218/Length1 4356>>
+stream
+endstream
+endobj
+12 0 obj
+<</Type/Metadata/Subtype/XML/Length 1463>>
+stream
+<?xpacket begin="?" id="W5M0MpCehiHzreSzNTczkc9d"?><x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="3.1-701">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rdf:Description rdf:about=""  xmlns:xmp="http://ns.adobe.com/xap/1.0/">
+</rdf:Description>
+<rdf:Description rdf:about=""  xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/">
+<xmpRights:Marked>True</xmpRights:Marked></rdf:Description>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+</rdf:RDF></x:xmpmeta><?xpacket end="w"?>
+endstream
+endobj
+trailer
+<<
+/Root 1 0 R
+>>
+%%EOF
