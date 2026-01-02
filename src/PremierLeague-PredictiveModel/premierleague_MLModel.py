@@ -30,7 +30,7 @@ SCALER = None
 DF = None
 
 def download_dataset():
-    dataset_name = 'meraxes10/fantasy-premier-league-2025-2026'
+    dataset_name = 'meraxes10/fantasy-premier-league-dataset-2025-2026'
     download_path = './data/'
     os.makedirs(download_path, exist_ok=True)
     os.environ["KAGGLE_USERNAME"] = os.getenv("KAGGLE_USERNAME")
