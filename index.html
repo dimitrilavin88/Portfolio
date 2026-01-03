@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Dimitri E. Lavin | Software Engineer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
+    
     <nav>
         <div class="nav-content">
             <div class="nav-left">
@@ -21,9 +24,16 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -31,7 +41,7 @@
         <div class="hero">
             <div class="hero-content">
                 <h1>Hi, I'm <span class="highlight">Dimitri</span></h1>
-                <h2>Graduate Student in Artificial Intelligence | Aspiring Software Engineer</h2>
+                <h2>Software Engineer | Master's in Computer Science (AI Specialization)</h2>
                 <p class="hero-description">Full-Stack Developer | Problem Solver | Code Enthusiast</p>
                 <div class="cta-buttons">
                     <a href="#projects" class="btn primary">View Projects</a>
@@ -41,17 +51,26 @@
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="fade-in">
         <h2>About Me</h2>
         <div class="about-content">
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Hi, I'm Dimitri, a passionate Computer Science student at Southern Methodist University, specializing in Artificial Intelligence and Software Development. With a strong foundation in programming languages like Python, Javascript, HTML/CSS, and Java, I enjoy tackling challenging projects that blend creativity with problem-solving.
-
-                        From building machine learning models to developing full-stack applications, I am always eager to learn and explore innovative technologies. My portfolio showcases projects that highlight my skills in [e.g., algorithm design, web development, and data analysis/machine learning].
-                        
-                        I thrive in collaborative environments and am committed to crafting efficient, user-focused solutions. Let's connect and create something impactful together!</p>
-                    <p>I am currently focused on advancing my skills in software engineering and artificial intelligence, with a particular interest in machine learning, full-stack development, and mobile development. My work involves exploring innovative applications of AI, building scalable web and mobile solutions, and continuously expanding my knowledge of emerging technologies. I'm passionate about creating impactful projects that solve real-world problems and push the boundaries of innovation.</p>
+                    <p class="about-intro">Hi, I'm Dimitri! I'm a Software Engineer with a Master's degree in Computer Science from Southern Methodist University, specializing in Artificial Intelligence. I focus on <strong>Full Stack Development</strong> and <strong>Web Development</strong>.</p>
+                    
+                    <p>I love building web applications from the ground up—everything from the frontend user experience to the backend infrastructure. I work with Python, JavaScript, Java, React, Node.js, and various modern frameworks. I also enjoy incorporating AI technologies into my projects, using machine learning models and intelligent features to make applications smarter and more useful.</p>
+                    
+                    <p>When I'm working on a project, I focus on:</p>
+                    <ul class="about-list">
+                        <li>Creating scalable full-stack solutions</li>
+                        <li>Designing responsive interfaces that users actually enjoy</li>
+                        <li>Building backend systems that are reliable and efficient</li>
+                        <li>Writing clean, maintainable code that makes a difference</li>
+                    </ul>
+                    
+                    <p>Some of my favorite projects include a scheduling platform that helps streamline communication and a food ordering system that gives local businesses more control over their operations.</p>
+                    
+                    <p class="about-cta">I'm always looking for new opportunities to tackle interesting problems using my full-stack and web development skills, especially when I can enhance them with AI technologies. If you're working on something cool or have an opportunity that might be a good fit, I'd love to chat!</p>
                 </div>
                 <div class="profile-image-container">
                     <img src="src/images/missionarypic.png" alt="Profile Picture" class="profile-image">
@@ -60,7 +79,7 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <h2>Technical Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">
@@ -103,42 +122,126 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="resume" class="fade-in">
+        <h2>Resume</h2>
+        <div class="resume-container">
+            <div class="resume-preview">
+                <iframe src="src/images/Dimitri-Lavin-Resume.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px" style="border: 1px solid #ddd; border-radius: 8px;"></iframe>
+            </div>
+            <div class="resume-download">
+                <a href="src/images/Dimitri-Lavin-Resume.pdf" download="Dimitri-Lavin-Resume.pdf" class="btn primary">
+                    <i class="fas fa-download"></i> Download Resume (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="fade-in">
         <h2>Featured Projects</h2>
         <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card fade-in-up">
                 <div class="project-image">
                     <img src="src/images/planno.png" alt="Planno">
                 </div>
                 <div class="project-info">
                     <h3>Planno</h3>
-                    <p>Planno helps bishops of the Church of Jesus Christ of Latter-Day Saints create booking links for interviews and meetings, so members can schedule directly from the bishop's availability, reducing coordination time and keeping meetings organized. The scheduling platform allows users to sync their Google Calendars for automatic meeting integration, and members can download meeting information to their Apple Calendars for seamless scheduling across all devices.</p>
+                    <div class="project-section">
+                        <h4>Description</h4>
+                        <p>Planno is a scheduling platform that helps bishops of the Church of Jesus Christ of Latter-Day Saints create booking links for interviews and meetings, enabling members to schedule directly from the bishop's availability.</p>
+                    </div>
+                    <div class="project-section">
+                        <h4>Problem</h4>
+                        <p>Coordination of meetings between bishops and members requires extensive back-and-forth communication, leading to scheduling conflicts, missed appointments, and significant time spent on manual coordination.</p>
+                    </div>
+                    <div class="project-section">
+                        <h4>Solution</h4>
+                        <p>Planno provides shareable booking links that display real-time availability, allowing members to self-schedule appointments. The platform integrates with Google Calendar for automatic sync and supports Apple Calendar downloads, ensuring seamless scheduling across all devices while keeping meetings organized and reducing coordination overhead.</p>
+                    </div>
+                    <div class="project-section">
+                        <h4>Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>React</span>
+                            <span>Supabase</span>
+                            <span>PostgreSQL</span>
+                            <span>Google Calendar API</span>
+                            <span>Vercel</span>
+                        </div>
+                    </div>
                     <div class="project-links">
                         <a href="https://github.com/dimitrilavin88/Planno" class="btn" target="_blank"><i class="fab fa-github"></i> Code</a>
                         <a href="https://plannomeetings.vercel.app/?code=10b009c8-90be-4699-af23-9084fbb6d5b6" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card fade-in-up">
                 <div class="project-image">
                     <img src="src/images/tastyfood.png" alt="TastyFood">
                 </div>
                 <div class="project-info">
                     <h3>TastyFood</h3>
-                    <p>TastyFood is a custom food ordering platform that enables local restaurants to accept online orders directly from customers, eliminating the 15-30% commission fees charged by third-party services like DoorDash and UberEats. By owning the ordering system, restaurants keep more revenue per order, maintain direct customer relationships, and have full control over pricing, promotions, and delivery logistics without middleman costs.</p>
+                    <div class="project-section">
+                        <h4>Description</h4>
+                        <p>TastyFood is a custom food ordering platform that enables local restaurants to accept online orders directly from customers, providing a complete ordering and delivery management system.</p>
+                    </div>
+                    <div class="project-section">
+                        <h4>Problem</h4>
+                        <p>Local restaurants lose 15-30% of each order's revenue to third-party delivery services like DoorDash and UberEats. They also lose direct customer relationships, control over pricing, and the ability to manage promotions effectively.</p>
+                    </div>
+                    <div class="project-section">
+                        <h4>Solution</h4>
+                        <p>By owning their ordering system, restaurants keep more revenue per order, maintain direct customer relationships, and have full control over pricing, promotions, and delivery logistics without middleman costs. The platform provides a complete solution for order management, customer communication, and delivery coordination.</p>
+                    </div>
+                    <div class="project-section">
+                        <h4>Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Vite</span>
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>PostgreSQL</span>
+                            <span>SQLite (prototype)</span>
+                            <span>Railway</span>
+                        </div>
+                    </div>
                     <div class="project-links">
                         <a href="https://github.com/dimitrilavin88/TastyFood" class="btn" target="_blank"><i class="fab fa-github"></i> Code</a>
                         <a href="https://tastyfooddelivery-production.up.railway.app/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
                     </div>
                 </div>
             </div>
-            <div class="project-card">
+            <div class="project-card fade-in-up">
                 <div class="project-image">
                     <img src="src/images/fantasyPL.png" alt="Project 1">
                 </div>
                 <div class="project-info">
                     <h3>Premier League MVP Predictor</h3>
-                    <p>A machine learning project that takes statistics from players in the English Premier League to determine who deservedly should become the MVP.</p>
+                    <div class="project-section">
+                        <h4>Description</h4>
+                        <p>A machine learning project that analyzes player statistics from the English Premier League to predict and determine who deservedly should become the MVP based on comprehensive performance metrics.</p>
+                    </div>
+                    <div class="project-section">
+                        <h4>Problem</h4>
+                        <p>MVP selection in Fantasy Premier League is often subjective and doesn't account for all relevant performance metrics. Traditional selection methods may overlook players who contribute significantly across multiple statistical categories.</p>
+                    </div>
+                    <div class="project-section">
+                        <h4>Solution</h4>
+                        <p>Using an XGBoost machine learning model trained on comprehensive player statistics (goals, assists, clean sheets, influence, creativity, threat, etc.), the system objectively predicts player value and identifies the top 25 MVP candidates based on data-driven analysis rather than subjective opinion.</p>
+                    </div>
+                    <div class="project-section">
+                        <h4>Tech Stack</h4>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>XGBoost</span>
+                            <span>scikit-learn</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Kaggle API</span>
+                            <span>Render</span>
+                        </div>
+                    </div>
                     <div class="project-links">
                         <a href="https://github.com/dimitrilavin88/Portfolio/tree/master/src/PremierLeague-PredictiveModel" class="btn" target="_blank"><i class="fab fa-github"></i> Code</a>
                         <a href="../pages/fpl.html" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
@@ -148,7 +251,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="fade-in">
         <h2>Let's Connect</h2>
         <p class="contact-intro">I'm always open to discussing new projects and opportunities.</p>
         <div class="social-links">
@@ -163,6 +266,7 @@
         <p>&copy; 2024 All rights reserved.</p>
     </footer>
 
+    <script src="src/app.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 
