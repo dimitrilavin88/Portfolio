@@ -11,7 +11,11 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage[T1]{fontenc}
+\usepackage[default]{roboto}
 \input{glyphtounicode}
+
+% Roboto is a modern sans-serif font designed by Google, perfect for tech industry resumes
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -88,12 +92,12 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, JavaScript, TypeScript, HTML/CSS, Java, Swift, MATLAB, C, Objective-C, C++, SQL} \\
-     \textbf{Frameworks \& Libraries}{: React, Next.js, React Native, Node.js, Flask, FastAPI, Vite, Spring Boot} \\
-     \textbf{ML/AI Libraries}{: scikit-learn, XGBoost, pandas, NumPy, TensorFlow, PyTorch, LightGBM, CatBoost} \\
-     \textbf{Databases}{: PostgreSQL, MySQL, SQLite, MongoDB} \\
-     \textbf{Tools \& Technologies}{: Git/GitHub, VS Code, IntelliJ IDEA, AWS, Railway, Vercel, Render, Supabase} \\
-     \textbf{APIs \& Services}{: Google Calendar API, Kaggle API, RESTful APIs} \\
-     \textbf{Project Management}{: Agile, Scrum, Software Development Life Cycle, Task Prioritization} \\
+     \textbf{Frameworks}{: React, Next.js, React Native, Node.js, Flask, FastAPI, Vite, Spring Boot} \\
+     \textbf{ML/AI}{: scikit-learn, XGBoost, pandas, NumPy, TensorFlow, PyTorch, LightGBM, CatBoost} \\
+     \textbf{Databases}{: PostgreSQL, MySQL, SQLite, MongoDB, Supabase} \\
+     \textbf{Tools}{: Git/GitHub, VS Code, IntelliJ IDEA, AWS, Railway, Vercel, Render} \\
+     \textbf{APIs}{: Google Calendar, Kaggle, RESTful} \\
+     \textbf{Methodologies}{: Agile, Scrum, SDLC} \\
     }}
  \end{itemize}
 
@@ -103,28 +107,28 @@
     \resumeProjectHeading
       {\textbf{Planno - Scheduling Platform}}{2024 - Present}
       \resumeItemListStart
-        \resumeItem{Developed a full-stack scheduling platform using Next.js, TypeScript, and React that helps church leaders create shareable booking links for interviews and meetings, enabling members to schedule directly from availability; deployed on Vercel with edge functions for calendar event creation and email notifications.}
-        \resumeItem{Implemented Google Calendar integration for automatic meeting sync and Apple Calendar download support; built backend infrastructure with Supabase and PostgreSQL, implementing Row Level Security (RLS) policies for secure data access and dashboard sharing capabilities.}
+        \resumeItem{Architected full-stack scheduling platform (Next.js, TypeScript, React) addressing meeting coordination conflicts. Solved via shareable booking links with real-time availability, enabling self-service scheduling eliminating back-and-forth communication. Integrated Google Calendar API for auto-sync and Apple Calendar downloads.}
+        \resumeItem{Engineered Supabase/PostgreSQL backend with Row Level Security policies; deployed on Vercel with edge functions enabling calendar event creation and dashboard sharing.}
       \resumeItemListEnd
 
     \resumeProjectHeading
       {\textbf{TastyFood - Food Ordering Platform}}{2024 - Present}
       \resumeItemListStart
-        \resumeItem{Built a full-stack food ordering platform using React with Vite (frontend) and Java Spring Boot (backend), deployed separately on Railway, enabling local restaurants to accept online orders directly from customers and eliminating 15-30\% commission fees charged by third-party services.}
-        \resumeItem{Implemented production-style engineering practices including modular backend architecture, reusable React components, secure authentication flows, and database integration with PostgreSQL and SQLite; designed role-based dashboards for customers, drivers, and restaurant staff with complete order management, payment processing, and delivery workflow systems.}
+        \resumeItem{Designed full-stack ordering platform (React, Java Spring Boot) solving 15-30\% revenue loss to third-party services. Eliminated commission fees through direct customer ordering via role-based dashboards, giving restaurants control over customer relationships.}
+        \resumeItem{Implemented Spring Boot REST APIs, JWT authentication and PostgreSQL. Built React components for order management, payment processing, and delivery workflows; deployed on Railway for scalable microservices.}
       \resumeItemListEnd
 
     \resumeProjectHeading
       {\textbf{Premier League MVP Predictor}}{2024 -- Present}
       \resumeItemListStart
-        \resumeItem{Built an XGBoost regression model to predict Fantasy Premier League player performance and identify MVP candidates using comprehensive player statistics (goals, assists, clean sheets, influence, creativity, threat).}
-        \resumeItem{Developed a FastAPI application with automated dataset downloading from Kaggle API, data preprocessing, feature scaling, and RESTful API endpoints; implemented CORS middleware and deployed on Render with real-time model predictions and scalable architecture.}
+        \resumeItem{Engineered XGBoost regression model replacing subjective MVP selection with data-driven analysis. Trained on player statistics (goals, assists, clean sheets, influence) to predict performance and identify top 25 MVP candidates.}
+        \resumeItem{Built FastAPI application with Kaggle API dataset ingestion and preprocessing. Implemented RESTful endpoints for predictions; deployed on Render with CORS middleware enabling concurrent requests.}
       \resumeItemListEnd
 
     \resumeProjectHeading
       {\textbf{Personal Portfolio Website}}{2021 -- Present}
       \resumeItemListStart
-        \resumeItem{Developed a responsive, modern portfolio website featuring an About Me section, Technical Skills showcase, and interactive project cards with detailed descriptions, problem-solution breakdowns, and tech stacks for Planno, TastyFood, and Premier League MVP Predictor projects, along with seamless navigation and professional design.}
+        \resumeItem{Developed responsive portfolio website showcasing projects with interactive cards, problem-solution narratives, and tech stacks. Implemented dark mode, smooth scrolling, and responsive design using HTML, CSS, and JavaScript.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -134,10 +138,10 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Southern Methodist University, Lyle School of Engineering}{Aug 2023 - Dec 2025}
-      {MS in Computer Science with Specialization in Artificial Intelligence; Major GPA: 3.5}{}
+      {MS in Computer Science, AI Specialization; GPA: 3.5}{}
     \resumeSubheading
       {University of North Carolina at Chapel Hill}{Aug 2018 - May 2022}
-      {BS in Computer Science and BA in Mathematics; Major GPA: 3.389}{}
+      {BS in Computer Science, BA in Mathematics; GPA: 3.389}{}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
@@ -145,24 +149,31 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
+      {SPED Paraprofessional}{Sept 2023 - Present}
+      {Jefferson School District 251}{}
+      \resumeItemListStart
+        \resumeItem{Facilitate SPED instruction by developing behavioral and academic goals, implementing progress tracking, and guiding achievement.}
+      \resumeItemListEnd
+
+    \resumeSubheading
       {Ward Executive Secretary}{Oct 2024 - Present}
       {The Church of Jesus Christ of Latter-Day Saints}{}
       \resumeItemListStart
-        \resumeItem{Organize meetings, prepare agendas, follow up on assignments, coordinate with ward leaders, and manage appointment scheduling for church leadership.}
+        \resumeItem{Coordinate leadership operations by organizing meetings, preparing agendas, managing scheduling, and facilitating communication.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Computer Science Tutor}{Aug 2018 - May 2022}
       {UNC Learning Center and Personal Tutoring}{}
       \resumeItemListStart
-        \resumeItem{Tutored high school and undergraduate students in programming (Python, Java, MATLAB) and advanced math topics; taught core computer science principles including recursion, data structures, and object-oriented programming.}
+        \resumeItem{Delivered instruction in programming (Python, Java, MATLAB) and advanced mathematics, emphasizing data structures, algorithms, and OOP.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Teachers' Assistant - APPL 101: Exploring Engineering}{Aug 2021 - Dec 2021}
       {University of North Carolina at Chapel Hill}{}
       \resumeItemListStart
-        \resumeItem{Instructed MATLAB modeling techniques and provided assignment support to students.}
+        \resumeItem{Instructed MATLAB modeling and provided support for engineering assignments.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
