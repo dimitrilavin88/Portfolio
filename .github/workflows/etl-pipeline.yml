@@ -1,0 +1,99 @@
+name: ETL and Predictions Pipeline
+
+on:
+  # Run on a schedule (every 15 minutes)
+  schedule:
+    - cron: '*/15 * * * *'  # Every 15 minutes
+  # Allow manual triggering from GitHub Actions UI
+  workflow_dispatch:
+  # Optional: Run on push to main/master (for testing)
+  # push:
+  #   branches:
+  #     - master
+  #     - main
+
+jobs:
+  run-etl:
+    name: Run ETL Pipeline
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+      - name: Trigger ETL Pipeline
+        env:
+          RENDER_URL: ${{ secrets.RENDER_APP_URL }}
+          API_KEY: ${{ secrets.ETL_API_KEY }}
+        run: |
+          echo "🚀 Triggering ETL pipeline on Render..."
+          echo "URL: $RENDER_URL/api/run-etl"
+          
+          # Build curl command with optional API key
+          CURL_CMD="curl -s -w '\n%{http_code}' -X POST \
+            '$RENDER_URL/api/run-etl' \
+            -H 'Content-Type: application/json' \
+            --max-time 300"
+          
+          # Add API key header if provided
+          if [ -n "$API_KEY" ]; then
+            CURL_CMD="$CURL_CMD -H 'X-API-Key: $API_KEY'"
+          fi
+          
+          # Execute and capture response
+          RESPONSE=$(eval $CURL_CMD)
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          
+          echo "Response Status: $HTTP_CODE"
+          echo "Response Body: $BODY"
+          
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
+            echo "✅ ETL pipeline completed successfully"
+          else
+            echo "❌ ETL pipeline failed with status code: $HTTP_CODE"
+            exit 1
+          fi
+
+  run-predictions:
+    name: Run Predictions Generation
+    runs-on: ubuntu-latest
+    needs: run-etl  # Run predictions after ETL completes
+    timeout-minutes: 10
+    
+    steps:
+      - name: Trigger Predictions Generation
+        env:
+          RENDER_URL: ${{ secrets.RENDER_APP_URL }}
+          API_KEY: ${{ secrets.ETL_API_KEY }}
+        run: |
+          echo "🧠 Triggering predictions generation on Render..."
+          echo "URL: $RENDER_URL/api/run-predictions"
+          
+          # Wait a bit for ETL to fully complete
+          sleep 5
+          
+          # Build curl command with optional API key
+          CURL_CMD="curl -s -w '\n%{http_code}' -X POST \
+            '$RENDER_URL/api/run-predictions' \
+            -H 'Content-Type: application/json' \
+            --max-time 300"
+          
+          # Add API key header if provided
+          if [ -n "$API_KEY" ]; then
+            CURL_CMD="$CURL_CMD -H 'X-API-Key: $API_KEY'"
+          fi
+          
+          # Execute and capture response
+          RESPONSE=$(eval $CURL_CMD)
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          
+          echo "Response Status: $HTTP_CODE"
+          echo "Response Body: $BODY"
+          
+          if [ "$HTTP_CODE" -ge 200 ] && [ "$HTTP_CODE" -lt 300 ]; then
+            echo "✅ Predictions generation completed successfully"
+          else
+            echo "❌ Predictions generation failed with status code: $HTTP_CODE"
+            exit 1
+          fi
+
