@@ -39,6 +39,47 @@
             font-size: 1.5em;
         }
 
+        .analysis-description {
+            background-color: #f8f9fa;
+            border-left: 4px solid #00ff87;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .analysis-description h3 {
+            color: #37003c;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .analysis-description p {
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-size: 0.95em;
+        }
+
+        .analysis-description p:last-child {
+            margin-bottom: 0;
+        }
+
+        .analysis-description strong {
+            color: #37003c;
+        }
+
+        .analysis-description ul {
+            margin: 10px 0;
+            padding-left: 25px;
+            color: #2c3e50;
+        }
+
+        .analysis-description li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+
         /* Dashboard embed styling */
         .dashboard-container {
             margin-top: 10px;
@@ -87,6 +128,19 @@
             .container {
                 padding: 10px;
             }
+
+            .analysis-description {
+                padding: 15px;
+                font-size: 0.9em;
+            }
+
+            .analysis-description h3 {
+                font-size: 1.1em;
+            }
+
+            .analysis-description ul {
+                padding-left: 20px;
+            }
             
             .dashboard-wrapper {
                 height: 1200px; /* Still tall on mobile but fits better */
@@ -104,6 +158,20 @@
     <h1>Premier League Player Value Predictor</h1>
     
     <div class="container dashboard-container">
+        <div class="analysis-description">
+            <h3>Analysis Overview</h3>
+            <p>
+                This MVP prediction model uses an <strong>XGBoost machine learning algorithm</strong> to analyze 15 performance 
+                metrics (goals, assists, clean sheets, saves, influence, creativity, threat, and more) from Premier League players. 
+                The predictions are based on Fantasy Premier League's official scoring system, which calculates each player's 
+                <strong>value_season</strong> based on their on-field performance throughout the season.
+            </p>
+            <p>
+                The model processes these metrics through gradient boosting to identify patterns and predict player value, 
+                displaying the results in the interactive dashboard below. Data updates automatically as new match statistics become available.
+            </p>
+        </div>
+        
         <h2>Interactive Data Analytics Dashboard</h2>
         <p style="margin-bottom: 10px; color: #666; font-size: 0.9em;">
             Explore player predictions, value comparisons, and analytics powered by machine learning.

@@ -1,101 +1,66 @@
-# [Personal Portfolio Website](https://www.dimitrilavin.com)
+## 👋 Hi, I'm Dimitri Lavín!
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript to showcase professional work and projects.
+### 💻 About Me
 
-## 🚀 Features
+I'm a Software Engineer with a Master's degree in Computer Science from Southern Methodist University, specializing in Artificial Intelligence. I focus on **Software Engineering** and **Full Stack Development**, building web applications from the ground up—from the frontend user experience to the backend infrastructure. I enjoy incorporating AI technologies into my projects, using machine learning models and intelligent features to make applications smarter and more useful.
 
-- Responsive design that works on all devices
-- Smooth scrolling navigation
-- Dynamic navigation highlighting
-- Project showcase with hover effects
-- Skills section with categorized abilities
-- Contact section with social media integration
-- Dark mode toggle
-- Loading animations
-- Mobile-friendly navigation
+### 🚀 Skills
 
-## 📁 Project Structure
+- **Languages:** Python, JavaScript, TypeScript, HTML/CSS, Java, Swift, MATLAB, C, C++, Objective-C, SQL
+- **Frameworks & Libraries:** React, Next.js, React Native, Node.js, Spring Boot, Flask, FastAPI, Vite
+- **Data Science & ML:** Pandas, NumPy, XGBoost, scikit-learn, Kaggle API
+- **Databases:** PostgreSQL, MySQL, SQLite, MongoDB, Supabase
+- **Tools & Technologies:** Git/GitHub, VS Code, IntelliJ IDEA, Google Calendar API
+- **Cloud & Deployment:** AWS, Vercel, Railway, Render
 
-### Included Projects
+### 🌐 Connect with Me
 
-- [Fantasy Premier League MVP Predictor](https://github.com/dimitrilavin88/Portfolio/tree/master/src/PremierLeague-PredictiveModel)
-- [Job Search Application](https://github.com/dimitrilavin88/react-native-job-app)
-- [Sudoku Puzzle Solver](https://github.com/dimitrilavin88/Portfolio/blob/master/src/sudokusolver.js)
-- [Weather Application](https://github.com/dimitrilavin88/Portfolio/blob/master/src/weather.js)
+- [LinkedIn](https://www.linkedin.com/in/dimitrilav%C3%ADn/)
+- [Personal Website](https://www.dimitrilavin.com)
 
-### Portfolio Contents
+### 🛠️ Featured Projects
 
-#### Navigation
+Here are some of my featured projects showcased on my portfolio:
 
-- Logo image
-- Name/brand
-- Navigation links (Home, About, Skills, Projects, Contact)
+1. **Planno - Scheduling Platform** | [Code](https://github.com/dimitrilavin88/Planno) | [Live Demo](https://plannomeetings.vercel.app/?code=10b009c8-90be-4699-af23-9084fbb6d5b6)
 
-#### Home Section
+   - **Description:** A full-stack scheduling platform that helps bishops create shareable booking links for interviews and meetings, enabling members to schedule directly from real-time availability.
+   - **Problem:** Manual meeting coordination causes scheduling conflicts, missed appointments, and significant time spent on back-and-forth communication.
+   - **Solution:** Shareable booking links with real-time availability, Google Calendar integration for automatic sync, and Apple Calendar download support for seamless cross-platform scheduling.
+   - **Tech Stack:** Next.js, TypeScript, React, Supabase, PostgreSQL, Google Calendar API, Vercel
 
-- Hero content
-- Introduction text
-- Call-to-action buttons
+2. **TastyFood - Food Ordering Platform** | [Code](https://github.com/dimitrilavin88/TastyFood) | [Live Demo](https://tastyfooddelivery-production.up.railway.app/)
 
-#### About Section
+   - **Description:** A custom full-stack food ordering platform that enables local restaurants to accept online orders directly from customers, providing complete ordering and delivery management.
+   - **Problem:** Restaurants lose 15-30% of revenue to third-party delivery services and lose direct customer relationships and control over pricing.
+   - **Solution:** Direct customer ordering through role-based dashboards, eliminating commission fees and giving restaurants complete control over customer relationships, pricing, and delivery logistics.
+   - **Tech Stack:** React, Vite, Java, Spring Boot, PostgreSQL, SQLite, Railway
 
-- Professional headshot
-- Personal bio
-- Background information
-- Current focus/interests
+3. **Premier League MVP Predictor** | [Code](https://github.com/dimitrilavin88/Portfolio/tree/master/src/PremierLeague-PredictiveModel) | [Live Demo](../pages/fpl.html)
+   - **Description:** A machine learning project that analyzes player statistics from the English Premier League to predict and determine MVP candidates based on comprehensive performance metrics.
+   - **Problem:** MVP selection is often subjective and doesn't account for all relevant performance metrics, potentially overlooking players who contribute significantly across multiple categories.
+   - **Solution:** XGBoost regression model trained on comprehensive player statistics (goals, assists, clean sheets, influence, creativity, threat) to objectively predict player value and identify top 25 MVP candidates using data-driven analysis.
+   - **Tech Stack:** Python, FastAPI, XGBoost, scikit-learn, Pandas, NumPy, Kaggle API, Render
 
-#### Skills Section
+### 📫 How to Reach Me
 
-Frontend Development:
+Feel free to reach out if you have any questions or just want to connect!
 
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome (for icons)
-- Google Fonts
-- Intersection Observer API
-- CSS Grid and Flexbox
-- CSS Custom Properties (Variables)
-- CSS Animations and Transitions
+- Email: dimitrilavin@gmail.com
 
-Backend Development:
+### 🌱 What I'm Currently Learning
 
-- Render.com for hosting Machine Learning API Model
+- Advanced Full Stack Development
+- AI/ML Integration in Web Applications
+- Software Project Planning and Management
 
-Tools & Technologies:
+### 🎯 Goals for 2025
 
-- Git (version control)
-- GitHub (repository hosting)
-- VS Code (recommended IDE)
-- Chrome DevTools (debugging and testing)
-- Image optimization tools
-- Responsive design testing tools
-- Web browsers for cross-browser testing:
-  - Chrome
-  - Firefox
-  - Safari
-  - Edge
-- Markdown (documentation)
+- Contribute to open-source projects
+- Continue building scalable full-stack applications
+- Enhance projects with AI/ML capabilities
+- Expand my portfolio with innovative solutions
 
-#### Projects Section
+---
 
-Each project includes:
-
-- Project screenshot
-- Project title
-- Description
-- Technologies used
-- Live demo link
-- GitHub repository link
-
-#### Contact Section
-
-- Contact introduction
-- Social media links
-- Professional email
-
-#### Footer
-
-- Copyright information
-- Additional links
-- Attribution
+Thank you for visiting my profile! Have a great day! 😄
