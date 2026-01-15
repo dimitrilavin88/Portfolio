@@ -6,9 +6,9 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px;
+            max-width: 100%;
+            margin: 0;
+            padding: 10px;
             background-color: #f8f9fa;
             color: #2c3e50;
         }
@@ -16,41 +16,42 @@
         h1 {
             text-align: center;
             color: #37003c;
-            font-size: 2.5em;
-            margin-bottom: 40px;
+            font-size: 2em;
+            margin-bottom: 15px;
+            margin-top: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
             border-bottom: 4px solid #00ff87;
-            padding-bottom: 10px;
+            padding-bottom: 8px;
         }
 
         .container {
             background-color: white;
             border-radius: 15px;
-            padding: 30px;
+            padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
+            margin-top: 10px;
         }
 
         h2 {
             color: #37003c;
-            margin-bottom: 25px;
-            font-size: 1.8em;
+            margin-bottom: 10px;
+            font-size: 1.5em;
         }
 
         /* Dashboard embed styling */
         .dashboard-container {
-            margin-top: 40px;
+            margin-top: 10px;
+            width: 100%;
         }
 
         .dashboard-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 75%; /* 4:3 aspect ratio */
-            height: 0;
-            overflow: hidden;
+            height: 1600px; /* Large fixed height to eliminate scrolling */
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
         .dashboard-wrapper iframe {
@@ -62,24 +63,39 @@
             border: none;
         }
 
-        @media (min-width: 1200px) {
+        @media (min-width: 1400px) {
+            body {
+                padding: 15px 30px;
+            }
+            
             .dashboard-wrapper {
-                padding-bottom: 60%; /* Better aspect ratio for larger screens */
+                height: 1800px; /* Even taller on very large screens */
             }
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
             body {
-                padding: 20px;
+                padding: 5px;
             }
 
             h1 {
-                font-size: 2em;
+                font-size: 1.5em;
+                margin-bottom: 10px;
             }
 
             .container {
-                padding: 20px;
+                padding: 10px;
+            }
+            
+            .dashboard-wrapper {
+                height: 1200px; /* Still tall on mobile but fits better */
+            }
+        }
+        
+        @media (min-width: 1920px) {
+            .dashboard-wrapper {
+                height: 2000px; /* Maximum height for very large displays */
             }
         }
     </style>
@@ -89,7 +105,7 @@
     
     <div class="container dashboard-container">
         <h2>Interactive Data Analytics Dashboard</h2>
-        <p style="margin-bottom: 25px; color: #666;">
+        <p style="margin-bottom: 10px; color: #666; font-size: 0.9em;">
             Explore player predictions, value comparisons, and analytics powered by machine learning.
             Data updates automatically every 15 minutes.
         </p>
