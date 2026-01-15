@@ -29,7 +29,7 @@ I'm a **Software Engineer** with a **Master's in Computer Science (AI Specializa
    - **Solution**: Role-based ordering dashboards to reduce fees and keep customer relationships in-house.
    - **Tech Stack**: React, Vite, Java, Spring Boot, PostgreSQL, SQLite (prototype), Railway
 
-3. **Premier League MVP Predictor — ML + Analytics Dashboard** | [Code](https://github.com/dimitrilavin88/Portfolio/tree/master/src/PremierLeague-PredictiveModel) | [Dashboard Page](pages/fpl.html)
+3. **Premier League MVP Predictor — ML + Analytics Dashboard** | [Code](https://github.com/dimitrilavin88/Portfolio/tree/master/src/PremierLeague-PredictiveModel) | [Dashboard Page](https://www.dimitrilavin.com/pages/fpl.html)
    - **Description**: ML system that predicts top MVP candidates using comprehensive player performance metrics.
    - **Problem**: MVP selection is often subjective and can miss all-around contributors.
    - **Solution**: XGBoost regression predicts player value from stats (goals, assists, clean sheets, influence, creativity, threat, etc.) and surfaces the top candidates via an embedded analytics dashboard.
@@ -40,11 +40,3 @@ I'm a **Software Engineer** with a **Master's in Computer Science (AI Specializa
 - **LinkedIn**: [linkedin.com/in/dimitrilavín](https://www.linkedin.com/in/dimitrilav%C3%ADn/)
 - **Email**: dimitrilavin@gmail.com
 
-### Run Locally
-- Open `index.html` directly, or run a local server:
-
-```bash
-python3 -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
