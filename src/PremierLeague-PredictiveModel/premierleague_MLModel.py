@@ -4,11 +4,13 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 import xgboost as xgb
 import kaggle
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
+import time
+from fastapi import FastAPI, Request, Header, HTTPException
+from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.middleware.cors import CORSMiddleware
+from typing import Optional
 
 app = FastAPI()
 
@@ -116,6 +118,101 @@ async def get_top_players():
             "status": "error",
             "error": str(e)
         }
+
+def verify_api_key(api_key: Optional[str] = Header(None, alias="X-API-Key")):
+    """Verify API key for protected endpoints"""
+    expected_key = os.getenv("ETL_API_KEY")
+    
+    # If no API key is set, allow access (for development)
+    if not expected_key:
+        return True
+    
+    # If API key is set, verify it
+    if not api_key or api_key != expected_key:
+        raise HTTPException(status_code=401, detail="Invalid or missing API key")
+    
+    return True
+
+@app.post("/api/run-etl")
+async def run_etl(x_api_key: Optional[str] = Header(None, alias="X-API-Key")):
+    """
+    Run ETL pipeline via API endpoint.
+    Can be called by external cron services.
+    
+    Optional: Set ETL_API_KEY environment variable for security.
+    If set, include it in the request header: X-API-Key: your_key
+    """
+    try:
+        # Verify API key if set
+        verify_api_key(x_api_key)
+        
+        # Import and run ETL pipeline
+        from etl_pipeline import ETLPipeline
+        
+        print("🚀 ETL Pipeline triggered via API")
+        start_time = time.time()
+        pipeline = ETLPipeline()
+        pipeline.run()
+        duration = int(time.time() - start_time)
+        
+        return JSONResponse({
+            "status": "success",
+            "message": "ETL pipeline completed successfully",
+            "rows_processed": pipeline.rows_inserted,
+            "duration_seconds": duration
+        })
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"❌ ETL Pipeline error: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return JSONResponse(
+            status_code=500,
+            content={
+                "status": "error",
+                "message": "ETL pipeline failed",
+                "error": str(e)
+            }
+        )
+
+@app.post("/api/run-predictions")
+async def run_predictions(x_api_key: Optional[str] = Header(None, alias="X-API-Key")):
+    """
+    Run predictions generation via API endpoint.
+    Can be called by external cron services.
+    
+    Optional: Set ETL_API_KEY environment variable for security.
+    If set, include it in the request header: X-API-Key: your_key
+    """
+    try:
+        # Verify API key if set
+        verify_api_key(x_api_key)
+        
+        # Import and run predictions script
+        from generate_predictions import main as run_predictions_main
+        
+        print("🚀 Predictions generation triggered via API")
+        run_predictions_main()
+        
+        return JSONResponse({
+            "status": "success",
+            "message": "Predictions generation completed successfully"
+        })
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"❌ Predictions generation error: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return JSONResponse(
+            status_code=500,
+            content={
+                "status": "error",
+                "message": "Predictions generation failed",
+                "error": str(e)
+            }
+        )
 
 if __name__ == "__main__":
     import uvicorn

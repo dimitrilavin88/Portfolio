@@ -8,4 +8,10 @@ kaggle
 joblib
 python-multipart
 jinja2
-aiofiles 
+aiofiles
+psycopg2-binary
+gspread
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+python-dotenv 

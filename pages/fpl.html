@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Premier League Player Value Predictor</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -39,82 +38,34 @@
             font-size: 1.8em;
         }
 
-        table {
+        /* Dashboard embed styling */
+        .dashboard-container {
+            margin-top: 40px;
+        }
+
+        .dashboard-wrapper {
+            position: relative;
             width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            margin-top: 25px;
-            background-color: white;
-            border-radius: 10px;
+            padding-bottom: 75%; /* 4:3 aspect ratio */
+            height: 0;
             overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        th {
-            background-color: #37003c;
-            color: white;
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #e9ecef;
-        }
-
-        tr:hover {
-            background-color: #f8f9fa;
-            transition: background-color 0.3s ease;
-        }
-
-        tr:last-child td {
-            border-bottom: none;
-        }
-
-        button {
-            background-color: #00ff87;
-            color: #37003c;
-            padding: 12px 25px;
+        .dashboard-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        button:hover {
-            background-color: #37003c;
-            color: #00ff87;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        #topPlayers {
-            margin-top: 25px;
-            overflow-x: auto;
-        }
-
-        /* Loading animation */
-        .loading {
-            text-align: center;
-            padding: 20px;
-            display: none;
-        }
-
-        .loading:after {
-            content: '.';
-            animation: dots 1.5s steps(5, end) infinite;
-        }
-
-        @keyframes dots {
-            0%, 20% { content: '.'; }
-            40% { content: '..'; }
-            60% { content: '...'; }
-            80%, 100% { content: ''; }
+        @media (min-width: 1200px) {
+            .dashboard-wrapper {
+                padding-bottom: 60%; /* Better aspect ratio for larger screens */
+            }
         }
 
         /* Responsive design */
@@ -130,66 +81,28 @@
             .container {
                 padding: 20px;
             }
-
-            td, th {
-                padding: 10px;
-            }
         }
     </style>
 </head>
 <body>
     <h1>Premier League Player Value Predictor</h1>
     
-    <div class="container">
-        <h2>Current Frontrunners for FPL MVP</h2>
-        <button onclick="getTopPlayers()">Get Top Players</button>
-        <div class="loading" id="loading">Loading players</div>
-        <div id="topPlayers"></div>
+    <div class="container dashboard-container">
+        <h2>Interactive Data Analytics Dashboard</h2>
+        <p style="margin-bottom: 25px; color: #666;">
+            Explore player predictions, value comparisons, and analytics powered by machine learning.
+            Data updates automatically every 15 minutes.
+        </p>
+        <div class="dashboard-wrapper">
+            <iframe 
+                src="https://lookerstudio.google.com/embed/reporting/85ab0292-29b9-42f9-b463-e507c8e0162c/page/HqJlF" 
+                frameborder="0" 
+                style="border:0" 
+                allowfullscreen 
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            </iframe>
+        </div>
     </div>
 
-    <script>
-        function getTopPlayers() {
-            // Show loading animation
-            $('#loading').show();
-            $('#topPlayers').hide();
-            
-            $.ajax({
-                url: 'https://fpl-mvp-predictor-api.onrender.com/api/top_players',
-                method: 'GET',
-                success: function(response) {
-                    if (response.status === 'success') {
-                        displayTopPlayers(response.top_players);
-                    } else {
-                        alert('Error: ' + response.error);
-                    }
-                    // Hide loading animation
-                    $('#loading').hide();
-                    $('#topPlayers').show();
-                },
-                error: function(xhr, status, error) {
-                    alert('Error fetching top players: ' + error);
-                    // Hide loading animation
-                    $('#loading').hide();
-                }
-            });
-        }
-
-        function displayTopPlayers(players) {
-            let html = '<table>';
-            html += '<tr><th>Name</th><th>Team</th><th>Current Value</th><th>Predicted Value</th></tr>';
-            
-            players.forEach(player => {
-                html += `<tr>
-                    <td>${player.name}</td>
-                    <td>${player.team}</td>
-                    <td>£${player.value_season}M</td>
-                    <td>£${player.predicted_value.toFixed(2)}M</td>
-                </tr>`;
-            });
-            
-            html += '</table>';
-            $('#topPlayers').html(html);
-        }
-    </script>
 </body>
 </html> 
